@@ -1,0 +1,160 @@
+@font-face {
+    font-family: 'Inter1';
+    src: url('../../../fonts/Inter/static/Inter-Light.ttf');
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Inter-regular';
+    src: url('../../../fonts/Inter/static/Inter-Regular.ttf');
+    font-style: normal;
+    font-weight:600;
+
+}
+
+@font-face {
+    font-family: 'Inter-bold';
+    src: url('../../../fonts/Inter/static/Inter-Bold.ttf');
+    font-style: normal;
+    font-weight:400;
+
+}
+
+@font-face {
+    font-family: 'Inter-semibold';
+    src: url('../../../fonts/Inter/static/Inter-SemiBold.ttf');
+    font-style: normal;
+    font-weight:400;
+
+}
+
+.dashboad-container{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.dashboard-top-view{
+    width:100%;
+    height: 155px;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.08);
+    padding: 20px;
+}
+
+.top-view-text{
+   
+    background: rgba(255, 255, 255, 0.6);
+}
+
+.top-view-text-card{
+    width:100%;
+    background: rgba(255, 255, 255, 0.8);
+    font-size: 13px;
+    padding:10px;
+    font-family: 'Inter-regular';
+    opacity: 0.88;
+}
+.dashboard-top-view-title{
+    font-size: 16px;
+    font-family: 'Inter-semibold';
+    opacity: 0.8;
+}
+.cursor{
+    cursor: pointer;
+}
+
+.task-render{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 30px;
+    
+}
+
+.task-card{
+    width: 100%;
+    height: 150px;
+}
+
+.task-card-title{
+    font-weight: 500;
+    opacity: 0.8;
+    font-size: 13px;
+    font-family: 'Inter-semibold';
+
+}
+
+.task-card-description{
+    font-size: 12px;
+    opacity: 0.8;
+    font-family: 'Inter-regular';
+}
+
+.task-card-duration{
+    opacity: 0.8;
+    font-size: 12px;
+    font-family: 'Inter-regular';
+
+}
+
+.avatar-views{
+    display: inline-block;
+    width: 100%;
+    float: left;
+    flex: 0.1;
+    margin-left: 25px;
+}
+
+.task-card-footer{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin-top: -15px;
+}
+
+.task-card-budget-text{
+    flex: 1;
+    font-size: 12px;
+    padding-left: 10px;
+    color: rgba(12, 140, 233,0.7);
+    font-family: 'Inter-regular';
+
+}
+
+.task-card-points{
+    flex: 0.04;
+    font-size: 12px;
+    padding-left: 10px;
+    opacity: 0.77;
+    font-family: 'Inter-regular';
+
+
+
+
+}
+
+.before-render-data{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 10px;
+    
+}
+
+.before-render-data-icon{
+    flex:0.12;
+    font-size: 12px;
+    opacity: 0.8;
+    text-align: center;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.before-render-data-text{
+    flex:1;
+    opacity: 0.8;
+    font-size: 12px;
+    padding-left: 29px;
+    font-family: 'Inter-regular';
+}

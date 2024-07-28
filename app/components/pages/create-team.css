@@ -1,0 +1,256 @@
+@font-face {
+    font-family: 'Inter1';
+    src: url('../../../fonts/Inter/static/Inter-Light.ttf');
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Inter-regular';
+    src: url('../../../fonts/Inter/static/Inter-Regular.ttf');
+    font-style: normal;
+    font-weight:600;
+
+}
+
+@font-face {
+    font-family: 'Inter-bold';
+    src: url('../../../fonts/Inter/static/Inter-Bold.ttf');
+    font-style: normal;
+    font-weight:400;
+
+}
+
+.create-team-view4-input:focus{
+    border: none;
+    outline: none;
+}
+.create-team-container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+
+}
+.create-team-view1{
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+
+}
+
+.create-team-view2{
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+
+}
+
+create-team-view4{
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+}
+.create-team-view3{
+
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+
+.create-team-view1-icon{
+    font-size: 14px;
+    opacity: 0.8;
+    justify-self: center;
+    align-self: center;
+    cursor:pointer;
+}
+
+.create-team-view1-text{
+    font-weight: 600;
+    opacity: 0.8;
+    margin-left: 10px;
+    font-family: 'Inter-bold';
+}
+
+
+.create-team-view2-icon{
+    width:30px;
+    height:30px;
+    background-color: rgba(12, 140, 233,0.9);
+    border-radius: 4px;
+}
+
+.pl-touch{
+    padding-left: 5px;
+}
+
+.create-team-view2-input{
+    width: calc(100%/1.15);
+    font-size: 12.9px;
+    padding: 0px;
+    font-family: 'Inter-regular';
+
+    
+}
+
+.create-team-view3-title{
+    font-weight: 500;
+    opacity: 0.8;
+    font-size: 14.9px;
+}
+
+
+.create-team-view3-description{
+    opacity: 0.8;
+    font-size: 12.9px;
+    margin-top: 6px;
+}
+
+.create-team-view4-input{
+    flex: 0.6;
+    border-radius: 5px;
+    font-size: 12px;
+    padding: 2px;
+    margin-top: -6.8px;
+
+}
+
+.create-team-view4-icon1{
+    flex: 0.4;
+    font-size: 12.7px;
+    cursor: pointer;
+}
+
+
+.create-team-view4-icon2{
+    flex: 0.3;
+    opacity: 0.7;
+    font-size: 12.7px;
+    cursor: pointer;
+
+}
+
+.create-team-view-scroll{
+    overflow-y: scroll;
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 100%;
+    height: 280px;
+    -ms-overflow-style: none;
+    padding: 10px;
+}
+
+.create-team-view-scroll::-webkit-scrollbar{
+    display: none;
+}
+
+.create-team-list-item{
+    width: 100%;
+    height: 158px;
+    border-radius: 8px;
+    padding: 10px;
+}
+
+.create-team-list-item-head{
+  display: grid;
+  grid-template-columns: 0.26fr 1fr;
+}
+
+.create-team-list-item-head-title{
+    font-size: 12px;
+    margin-top: -2px;
+}
+
+.footer-details-create-list-item{
+    font-size: 11px;
+}
+
+.lil-sized-text{
+    font-size: 11px;
+    opacity: 0.8;
+    font-weight: 400;
+}
+
+.dot-symbol{
+    font-size: 19px;
+    font-weight: 900;
+}
+.create-team-list-item-head-description{
+    font-size: 12px;
+    padding-left: 56px;
+    margin-top: -14px;
+}
+
+.create-team-list-item-head-description-inner{
+    display: flex;
+    flex-direction: row;
+}
+
+.create-team-list-item-head-title-view{
+    display: grid;
+    grid-template-columns: 1fr 0.2fr 1fr;
+}
+
+.star-checked{
+    color: rgb(230, 192, 28);
+}
+
+.star-unchecked{
+    opacity: 0.5;
+}
+.star-rating{
+    
+}
+.start-view{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+}
+
+.create-team-list-item{
+    margin-top: 10px;
+    
+}
+
+.create-team-dialog-footer-button{
+    width: 100px;
+    height: 100%;
+    background-color: rgba(12, 140, 233,0.9);
+    display: grid;
+    grid-template-columns: 1fr 0.4fr;
+    padding: 7px;
+    cursor: pointer;
+}
+
+.create-team-dialog-footer-button-text{
+    font-size: 13px;
+    font-weight: 500;
+    opacity: 0.8;
+    text-align: center;
+    color: white;
+}
+
+.create-team-dialog-footer-button-tip{
+    background: rgba(255, 255, 255,0.4);
+    font-size: 10.7px;
+    text-align: center;
+    color: white;
+    border-radius: 4px;
+    padding: 2px;
+    margin-top: -1px;
+}
+
+.developers-list-filer-item-title{
+    font-weight: 600;
+    opacity: 0.9;
+    font-size: 16px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.developers-list-filer-item-description{
+    font-size: 11px;
+}
+
+.developers-list-filer-item-title{
+    font-size: 12px;
+}

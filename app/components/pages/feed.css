@@ -1,0 +1,443 @@
+@font-face {
+    font-family: 'Inter1';
+    src: url('../../../fonts/Inter/static/Inter-Light.ttf');
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Inter-regular';
+    src: url('../../../fonts/Inter/static/Inter-Regular.ttf');
+    font-style: normal;
+    font-weight:600;
+
+}
+
+@font-face {
+    font-family: 'Inter-bold';
+    src: url('../../../fonts/Inter/static/Inter-Bold.ttf');
+    font-style: normal;
+    font-weight:400;
+
+}
+
+
+@font-face {
+    font-family: 'Inter-semibold';
+    src: url('../../../fonts/Inter/static/Inter-SemiBold.ttf');
+    font-style: normal;
+    font-weight: 400;
+
+}
+
+
+@font-face {
+    font-family: 'Inter-medium';
+    src: url('../../../fonts/Inter/static/Inter-Regular.ttf');
+    font-style: normal;
+    font-weight: 400;
+
+}
+
+.feed-popup-desc{
+    flex:1;
+    padding-left:10px;
+    padding-right: 8px;
+    font-size: 10.6px;
+    opacity:0.98;
+    font-family:'Inter1';
+}
+
+.feed-page-title{
+    flex:0.2;
+    font-size:12px;
+    font-family:'Inter-bold';
+
+}
+
+.feed-container{
+    display: flex;
+    flex-direction: column;
+    height: 650px;
+    background: rgba(0, 0, 0, 0.015);
+    border-right: 1px solid rgba(0, 0, 0, 0.08);
+
+
+}
+
+
+.top-view-text{
+    padding: 10px;
+    font-size: 12px;
+    width: calc(100%/1.2);
+    margin-top: 8px;
+    font-family: 'Inter-regular';
+}
+
+.feed-top-view-title{
+    font-size: 19px;
+    font-family: 'Inter-semibold';
+    font-weight: 600;
+}
+.cursor{
+    cursor: pointer;
+}
+
+.feed-view-top-title-div{
+    display: flex;
+    flex-direction: row;
+    width: auto;
+    justify-items: center;
+    justify-self: center;
+    align-items: center;
+    flex:1;
+    margin-top: 3px;
+    cursor: pointer;
+    transition: 0.1s;
+    height: 30px;
+    border-radius: 9px;
+    margin-left: -10px;
+    padding-top: 5px;
+
+}
+
+.feed-view-top-title-div:hover{
+
+    background: rgba(0, 0, 0, 0.015);
+
+}
+
+.feed-top-view-icon{
+    font-size: 11px;
+    opacity: 0.6;
+    margin-left: 10px;
+}
+
+.feed-top-bar-selection{
+   flex: 1;
+   height: 30px;
+   border-radius: 7px;
+   display: grid;
+   grid-template-columns: 1fr 0.2fr;
+   padding: 4px;
+   padding-left: 14px;
+   cursor: pointer;
+}
+
+
+
+
+.feed-bottom-view{
+    bottom: 0;
+    position: sticky;
+    position: -webkit-sticky;
+    width:100%;
+    display: flex;
+    flex-direction: column;
+    padding: 26px;
+    align-content: baseline;
+    
+    
+    
+}
+
+
+.feed-top-bar-selection-text{
+    font-size: 12px;
+    font-weight: 600;
+    opacity: 0.7;
+    font-family: 'Inter-semibold';
+
+
+
+}
+
+.feed-top-bar-selection-text-icon{
+    font-size: 10px;
+    font-weight: 600;
+    opacity: 0.7;
+    background: rgba(0, 0, 0, 0.08);
+    border-radius: 3px;
+    padding: 1.5px;
+    text-align: center;
+    font-family: 'Inter-regular';
+
+
+
+
+}
+
+.message-container-top-view-avatar{
+    width:20px;
+    height: 20px;
+    border-radius: 10px;
+    margin-left: 5px;
+
+}
+
+.message-container-top-view-username{
+    font-size: 12px;
+    opacity: 0.8;
+    font-family: 'Inter-regular';
+}
+
+.message-container-top-view-username-discord{
+    font-size: 12px;
+    opacity: 0.7;
+    font-family: 'Inter-regular';
+}
+
+.message-container-top-view-username-reply{
+    font-size: 12px;
+    opacity: 1;
+    flex: 0.78;
+    font-family: 'Inter1';
+
+}
+
+.message-container-top-view-reply-message{
+    font-size: 12px;
+    opacity: 1;
+    flex: 1;
+    text-align: left;
+    padding-left: 4px;
+    font-family: 'Inter-regular';
+
+}
+
+.message-container-top-view-reply{
+    font-size: 12px;
+    opacity: 0.8;
+    padding-left: 2px;
+    
+}
+
+.message-container-top-view{
+    display: grid;
+    grid-template-columns: 0.15fr 1fr;
+}
+
+.message-container-top-view-discord{
+    display: grid;
+    grid-template-columns: 0.15fr 1fr 0.2fr;
+}
+
+.message-container-top-view-with-right-icon{
+    display: grid;
+    grid-template-columns: 0.15fr 1fr 0.2fr;
+}
+
+.message-container-top-view-reply{
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+
+}
+
+.message-container-top-view-reply-icon{
+    flex: 0.3;
+    align-self: center;
+    justify-self: center;
+}
+
+.message-container-top-view-discord-icon{
+    flex: 0.3;
+    align-self: center;
+    justify-self: center;
+    opacity: 0.58;
+}
+
+.message-container-top-view-right-fly-icon{
+    flex: 0.3;
+    align-self: center;
+    justify-self: center;
+    opacity: 0.8;
+    font-size: 13px;
+}
+
+
+.message-feed-view{
+    overflow-y: scroll;
+    height: 90%;  
+    -ms-overflow-style: none;  
+}
+.message-feed-view::-webkit-scrollbar{
+    display: none;
+}
+
+.feed-top-view{
+    width:100%;
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    height: 10%;
+}
+
+
+.message-container-view{
+    width:100%;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+
+.message-container-top-view-message-text{
+    font-family: 'Inter-medium';
+
+}
+
+.message-container-top-view-message{
+    font-size: 12px;
+    font-family: 'Inter-medium';
+    padding: 20px;
+    padding-left: 40px;
+    margin-top: -15px;
+}
+
+.message-container-view-message-reactions{
+    width:100%;
+    display: flex;
+    flex-direction: row;
+    padding-top: 6px;
+    margin-left: -7px;
+      
+}
+
+.active-message-reaction{
+    cursor: pointer;
+    width:36px;
+    height: 20px;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-content: center;
+    justify-items: center;
+    margin-left: 10px;
+}
+
+.message-reaction-counter{
+    font-size: 11px;
+    align-self: center;
+    align-content: center;
+    text-align: center;
+    font-weight: 500;
+}
+.message-reaction-icon{
+    font-size: 12px;
+    align-self: center;
+    align-content: center;
+}
+
+.reaction-unchecked{
+    opacity: 0.89;
+    font-family: 'Inter-bold';
+
+}
+
+.reaction-checked{
+    color: rgba(12, 140, 233,0.9);;
+    border: 0.5px solid rgba(12, 140, 233,0.8);
+    background:rgba(12, 140, 233,0.1);
+    font-family: 'Inter-bold';
+}
+
+.message-mention-badge{
+    background:rgba(12, 140, 233,0.22);
+    color:rgba(12, 140, 233,0.83);
+    padding: 2px;
+    font-weight: 600;
+    font-family: 'Inter-regular';
+ 
+}
+.message-replies{
+    width: 100%;
+    margin-top: 7px;
+    height: 55px;
+    padding: 8px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.message-container-top-view-reply-count{
+    margin-left: 30px;
+    color: rgba(12, 140, 233,0.8);
+
+}
+
+.bottom-input-card{
+    width: 100%;
+    height: 40px;
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+}
+
+.bottom-input-element{
+    flex: 1;
+    height: 100%;
+    font-size: 14px;
+    font-family: 'Inter-regular';
+    background: none;
+    padding-left: 7px;
+    outline: none;
+
+}
+
+.bottom-input-element-icon{
+    font-size: 10px;
+    opacity: 0.7;
+    align-self: center;
+    justify-content: center;
+    flex: 0.1;
+    cursor: pointer;
+}
+
+.markdown-support{
+    display: flex;
+    flex-direction: row;
+    padding: 4px;
+}
+
+.resized-create-poll{
+    width:100%;
+    background: none;
+    box-shadow: none;
+    display: grid;
+    grid-template-columns: 0.08fr 1fr;
+    padding: 0;
+    margin: 0;
+    border:none;
+}
+.markdown-support-icon{
+    font-size: 15.5px;
+    opacity: 0.8;
+}
+.markdown-support-text{
+    font-size: 11px;
+    opacity: 0.8;
+    padding-left: 4px;
+    font-family: 'Inter-regular';
+}
+
+.create-team-dialog-footer{
+    width: 100%;
+    height: 50.9px;
+    border-top: 1px solid rgba(0, 0, 0, 0.08);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+.creating-poll-container{
+    width:100%;
+    height:100%;
+    padding:10px;
+}
+
+.creating-poll-container-title{
+    font-family:'Inter-semibold';
+    opacity:'0.8';
+    font-size:13px;
+}

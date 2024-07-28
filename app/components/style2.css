@@ -1,0 +1,92 @@
+.add-tem{
+    cursor: pointer;
+}
+
+.popup-container{
+    width: auto;
+    height: 500px;
+    display: flex;
+    flex-direction: row;
+}
+
+.popup-dialog-content{
+    padding: 0px;
+    margin: 0px;
+
+}
+.popup-side-pane{
+    flex: 0.6;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.035);
+    border-right: 0.8px solid rgba(0, 0, 0, 0.08);
+    padding:10px;
+
+}
+
+.popup-body-pane{
+    flex: 1;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.02);
+
+}
+
+.lulink-icon{
+    transform: rotate(90deg);
+    font-weight: 700;
+}
+
+.popup-pane-list-title{
+    opacity: 0.8;
+    font-size: 14px;
+    
+}
+
+.colored-icon-1{
+    width:8px;
+    height: 8px;
+    background-color: #0C8CE9;
+    opacity: 1;
+}
+
+
+.colored-icon-2{
+    width:8px;
+    height: 8px;
+    background-color: #00B562;
+    opacity: 1;
+}
+
+
+.colored-icon-3{
+    width:8px;
+    height: 8px;
+    background-color: rgba(255, 0, 0,0.8);
+    opacity: 1;
+}
+
+.hor-zon-tal-view{
+    display: grid;
+    grid-template-columns: 1fr 0.1fr;
+}
+
+.hor-zon-tal-view-x{
+    display: grid;
+    grid-template-columns: 1fr 0.6fr;
+}
+
+.add-developers-button-text{
+    font-size: 10px;
+    font-family: 'Inter-regular';
+    font-weight: 700;
+}
+
+.column-based-view{
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.gmail-view-of-dev{
+    opacity: 0.8;
+    font-family: 'Inter-regular';
+    font-size: 11.2px;
+}
