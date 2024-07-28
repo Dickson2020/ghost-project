@@ -262,7 +262,7 @@ because of his extensive experience in
 project management and her proven track 
 record of successfully leading similar projects 
 to completion. His skills and expertise will be 
-invaluable to our project's success</p>
+invaluable to our projects success</p>
 
                     </div>
 
