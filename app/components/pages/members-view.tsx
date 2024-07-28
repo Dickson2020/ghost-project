@@ -27,11 +27,14 @@ import React from 'react';
 
 
  
+interface MembersViewProps {
+  callMe: () => void;
+}
 
-const MembersView = ({callMe}) =>{
+const MembersView: React.FC<MembersViewProps> = ({ callMe }) => {
 
-  function callUs(){
-    callMe()
+  function callUs() {
+    callMe();
   }
     return(
         <div className='create-team-container'>
