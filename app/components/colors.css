@@ -1,10 +1,8 @@
-p{
-    background: #00B562;
-    background: #0C8CE9;
-    background: #F3ABA7;
-    background: #8032FF;
-    background: #FF9E1C;
-    
-
+:root{
+    --green:#00B562;
+    --blue:  rgb(12, 140, 233);
+    --darkpink: #F3ABA7;
+    --dark-purp: #8032FF;
+    --orange: #FF9E1C;
 
 }

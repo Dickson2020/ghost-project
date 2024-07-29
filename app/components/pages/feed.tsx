@@ -9,6 +9,8 @@ import { IoCloseSharp } from "react-icons/io5";
 import CustomProgressBar from './progress'
 import { GoTriangleDown, GoTriangleRight } from "react-icons/go";
 import { FaPlus } from "react-icons/fa";
+import { TbTrash } from "react-icons/tb";
+
 import {
     DropdownMenu,
     DropdownMenuContent,
@@ -23,11 +25,17 @@ import {
   import { FaMarkdown } from "react-icons/fa6";
 import CustomProgressBar2 from './progress2'
 import { FaCheckCircle } from "react-icons/fa";
-import { useState } from 'react'
+import React, { useState } from 'react'
 import { BsFillArrowUpRightCircleFill } from "react-icons/bs";
+import { FaRegCircle } from "react-icons/fa";
 
 
-
+import {
+  Popover,
+  PopoverContent,
+  PopoverTrigger,
+} from "@/components/ui/popover"
+import { Input } from '@/components/ui/input'
 
 
 
@@ -35,9 +43,40 @@ import { BsFillArrowUpRightCircleFill } from "react-icons/bs";
 export default function FeedView(){
 
   const [feedType,setFeedType] = useState('in_app')
+  const [createPollDialog, setCreatePollDialog] = useState(false)
 
+
+
+  function openModal(){
+    setCreatePollDialog(true)
+  }
+
+  function  closeModal2(){
+    const element = document.getElementById('custom-create-poll-dialog-container')
+    if( element != null ){
+      setCreatePollDialog(false)
+
+    }
+  }
+
+  function closeModal(event: React.MouseEvent<HTMLDivElement>){
+    const target = event.target as HTMLDivElement
+    if(target != null){
+      const element = document.getElementById('custom-create-poll-dialog-container')
+      if( element != null && target.id == 'custom-create-poll-dialog-container' ){
+        setCreatePollDialog(false)
+
+      }
+
+    }
+  }
+  
+  
     return(
         <div className='feed-container'>
+
+
+        
 
             <div className='feed-top-view'>
 
@@ -372,47 +411,13 @@ invaluable to our projects success</p>
 
           <DropdownMenuItem className="cursor">
 
-
-
-     
-            <DropdownMenu>
-      <DropdownMenuTrigger asChild>
-       
-
-          <Card className='resized-create-poll'>
+          <div className='resized-create-poll' onClick={openModal}>
           <HiBars3CenterLeft className='mt-[2px]' style={{fontSize:'11px',opacity:'0.66'}} />
             <span className="nav-side-pop-item-text ml-[12px]" style={{fontSize:'12px'}}>Create poll</span>
           
                 
-            </Card>
-        
- 
-              
-       </DropdownMenuTrigger>
-       <DropdownMenuContent className="w-[220px] h-[170px] ml-[-40%] mt-[-60%]">
-       
-       <div className='creating-poll-container'>
-        <p className='creating-poll-container-title'>Creating poll</p>
-
-
-
-        <div className='create-team-dialog-footer p-[7px]'>
-                <Card className='create-team-dialog-footer-button'>
-                    <p className='create-team-dialog-footer-button-text'>Create</p>
-                    <div className='create-team-dialog-footer-button-tip'>Enter</div>
-                </Card>
             </div>
-       </div>
-
-       
-        </DropdownMenuContent>
-       </DropdownMenu>  
-
-
-
-
-
-
+          
 
 
 
@@ -437,9 +442,70 @@ invaluable to our projects success</p>
 
             </div>
 
-        
+        {createPollDialog? <div className='custom-create-poll-dialog-container' id='custom-create-poll-dialog-container' onClick={(event)=>closeModal(event)}> 
+          <div id='custom-create-poll-dialog' className='custom-create-poll-dialog'>
             
-            
-        </div>
-    )
+            <p className='creating-poll-options-title'>Creating poll</p>
+           <Card className='create-poll-input-container'>
+           <Input className='focus:outline-none input-create-poll' placeholder='Type a quesion...' />
+           </Card>
+
+           <div className='mt-[15px]'>
+
+           <div className='creating-poll-options'>
+            <p className='creating-poll-options-text'>Agree</p>
+
+            <div  className='creating-poll-options-icons'>
+
+            <FaRegCircle className='creating-poll-options-icon' style={{transform:'scale(0.8,0.8'}}/>
+
+              <TbTrash className='creating-poll-options-icon'/>
+              
+
+            </div>
+
+           
+            </div>
+
+           <div className='creating-poll-options mt-[10px]'>
+            <p className='creating-poll-options-text'>Disagree</p>
+
+            <div  className='creating-poll-options-icons'>
+
+            <FaRegCircle className='creating-poll-options-icon' style={{transform:'scale(0.8,0.8'}}/>
+
+              <TbTrash className='creating-poll-options-icon'/>
+              
+
+            </div>
+
+           
+            </div>
+
+            <div className='creating-poll-options mt-[10px]'>
+            <p className='creating-poll-options-text add-options-btn' style={{opacity:'0.45'}}>Add option...</p>
+
+
+           
+            </div>
+
+
+            </div>
+
+            <div className='create-team-dialog-footer p-[7px] gap-6'>
+
+            <Card className='create-team-dialog-footer-button-no-design' onClick={closeModal2}>
+                    <p className='create-team-dialog-footer-button-text-no-design'>Cancel</p>
+                </Card>
+
+                <Card className='create-team-dialog-footer-button ml-[3px]' >
+                    <p className='create-team-dialog-footer-button-text'>Create</p>
+                    <div className='create-team-dialog-footer-button-tip'>Enter</div>
+                </Card>
+            </div>
+
+
+            </div></div> : <div/>}</div>
+      
+      )
 }

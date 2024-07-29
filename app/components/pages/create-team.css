@@ -212,6 +212,15 @@ create-team-view4{
     
 }
 
+.create-team-dialog-footer-button-no-design{
+    width: 80px;
+    height: 36px;
+    background-color:white;
+    padding: 7px;
+    cursor: pointer;
+    color: black;
+
+}
 .create-team-dialog-footer-button{
     width: 100px;
     height: 100%;
@@ -228,6 +237,15 @@ create-team-view4{
     opacity: 0.8;
     text-align: center;
     color: white;
+}
+
+
+.create-team-dialog-footer-button-text-no-design{
+    font-size: 13px;
+    font-weight: 500;
+    opacity: 0.8;
+    text-align: center;
+    color: black;
 }
 
 .create-team-dialog-footer-button-tip{
