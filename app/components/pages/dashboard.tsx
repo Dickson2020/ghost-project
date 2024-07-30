@@ -25,7 +25,7 @@ export default function DashboardView(){
                 <p className='before-render-data-text'>This weeks tasks</p>
                 <FaPlus className='before-render-data-icon' />
             </div>
-            <div className='task-render'>
+            <div className='task-render-dashboard'>
                 <Card className='task-card'>
                     <CardContent>
                         <p className='task-card-duration mt-[12px]'>1 Jun -- 5 Jun</p>

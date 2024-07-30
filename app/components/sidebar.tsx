@@ -20,7 +20,7 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
 import { IoMdSettings } from "react-icons/io";
-import { BiSolidLogOutCircle } from "react-icons/bi";
+import { BiSolidInbox, BiSolidLogOutCircle } from "react-icons/bi";
 import { AvatarFallback, AvatarImage, Avatar } from "@/components/ui/avatar";
 import { FaCheckCircle } from "react-icons/fa";
 import { RiQuestionFill } from "react-icons/ri";
@@ -40,19 +40,29 @@ import BillingView from "./pages/billing-view";
 
 
 
+interface SideNavigationProp{
+  changePage: (page_name: string) => void
+}
 
-
-const SideNavigation = () =>{
+const SideNavigation: React.FC<SideNavigationProp> = ({changePage}) =>{
   const [currentTab,setCurrentTab] = useState('')
   const [currentTabPopup,setCurrentTabPopup] = useState('popup_members')
   const [currentAccount, setCurrentAccount] = useState('2')
   const [dialog_page_to_show, set_dialog_page_To_show] = useState<JSX.Element>( <CreateTeamView />)
   
 
+  
   function reRenderRouter(){
     let _PAGE = null
     return _PAGE
   }
+
+
+  useEffect(()=>{
+
+    changePage(currentTab)
+
+  },[currentTab])
 
   
   const callMe = () =>{
@@ -153,7 +163,7 @@ const SideNavigation = () =>{
                  "nav-list-items nav-list-items-selected":
                  "nav-list-items"
                   }>
-                  <RiMapFill className="nav-list-item-icon" />  
+                  <BiSolidInbox className="nav-list-item-icon" />  
                   <p className="nav-list-item-text">Kanban</p>
                   <Card className="nav-list-item-right-icon">
                  <p className="nav-list-item-right-icon-text"> ⌘K </p>

@@ -63,11 +63,12 @@
     cursor: pointer;
 }
 
-.task-render{
+.task-render-dashboard{
     width: 100%;
     height: 100%;
     display: grid;
     grid-template-columns: 1fr;
+    gap: 6px;
     padding: 30px;
     
 }

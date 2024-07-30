@@ -5,6 +5,7 @@ import { LuSlidersHorizontal } from "react-icons/lu";
 import { FaFilter } from "react-icons/fa6";
 import { LuDot } from "react-icons/lu";
 import { AvatarFallback, AvatarImage, Avatar } from "@/components/ui/avatar";
+import {ScrollArea} from "@/components/ui/scroll-area";
 import { FaStar } from "react-icons/fa6";
 import {
     DropdownMenu,
@@ -93,7 +94,7 @@ export default function CreateTeamView(){
 
             </div>
 
-            <div className='create-team-view-scroll'>
+            <ScrollArea className='create-team-view-scroll'>
                 <Card className='create-team-list-item'>
                     <div className='create-team-list-item-head'>
                     <Avatar className="create-team-list-item-head-icon">
@@ -173,7 +174,7 @@ export default function CreateTeamView(){
                 </div>
 
                 </Card>
-            </div>
+            </ScrollArea>
 
             <div className='create-team-dialog-footer p-[7px]'>
                 <Card className='create-team-dialog-footer-button'>
