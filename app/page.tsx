@@ -31,6 +31,7 @@ export default function Home() {
       body_pane_element.style.height = window.innerWidth - 280 + 'px'
     
     }
+    
   }
 
 
@@ -69,12 +70,20 @@ export default function Home() {
       )
 
       break;
+
+      default:
+        element =  (
+          <div className='body-pane-dashboard'>
+             <FeedView />
+             <DashboardView />
+          </div>
+        )
     }
 
      return element
   }
   
-
+    
   useEffect(()=>{
     setPageEl(renderMenuPage())
   },[navigation])

@@ -45,7 +45,7 @@ interface SideNavigationProp{
 }
 
 const SideNavigation: React.FC<SideNavigationProp> = ({changePage}) =>{
-  const [currentTab,setCurrentTab] = useState('')
+  const [currentTab,setCurrentTab] = useState('dashboard')
   const [currentTabPopup,setCurrentTabPopup] = useState('popup_members')
   const [currentAccount, setCurrentAccount] = useState('2')
   const [dialog_page_to_show, set_dialog_page_To_show] = useState<JSX.Element>( <CreateTeamView />)
