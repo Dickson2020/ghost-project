@@ -25,7 +25,7 @@ import {
   import { FaMarkdown } from "react-icons/fa6";
 import CustomProgressBar2 from './progress2'
 import { FaCheckCircle } from "react-icons/fa";
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { BsFillArrowUpRightCircleFill } from "react-icons/bs";
 import { FaRegCircle } from "react-icons/fa";
 
@@ -45,6 +45,15 @@ export default function FeedView(){
   const [feedType,setFeedType] = useState('in_app')
   const [createPollDialog, setCreatePollDialog] = useState(false)
 
+  useEffect(()=>{
+    const container_element = document.getElementById('feed-container') as HTMLDivElement
+    if(container_element){
+     container_element.style.height = window.innerHeight - 2 + 'px'
+    
+    }
+
+
+},[])
 
 
   function openModal(){
@@ -73,7 +82,7 @@ export default function FeedView(){
   
   
     return(
-        <div className='feed-container'>
+        <div className='feed-container' id='feed-container'>
 
 
         

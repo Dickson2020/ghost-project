@@ -3,12 +3,23 @@ import { Card, CardContent, CardFooter } from '@/components/ui/card'
 import './dashboard.css'
 import { AvatarFallback, AvatarImage, Avatar } from "@/components/ui/avatar";
 import { FaPlus } from "react-icons/fa6";
+import { useEffect } from 'react';
 
 
 export default function DashboardView(){
 
+    useEffect(()=>{
+        const container_element = document.getElementById('dashboad-container') as HTMLDivElement
+        if(container_element){
+         container_element.style.height = window.innerHeight - 2 + 'px'
+        
+        }
+    
+    
+    },[])
+
     return(
-        <div className='dashboad-container'>
+        <div className='dashboad-container' id='dashboad-container'>
 
             <div className='dashboard-top-view'>
 
