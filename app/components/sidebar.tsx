@@ -64,6 +64,17 @@ const SideNavigation: React.FC<SideNavigationProp> = ({changePage}) =>{
 
   },[currentTab])
 
+  useEffect(()=>{
+    const container_element = document.getElementById('sidebar-container') as HTMLDivElement
+    if(container_element){
+     container_element.style.height = window.innerHeight - 2 + 'px'
+    
+    }
+
+
+},[])
+
+
   
   const callMe = () =>{
     setCurrentTabPopup('popup_create_team')
@@ -101,7 +112,7 @@ const SideNavigation: React.FC<SideNavigationProp> = ({changePage}) =>{
   },[currentTabPopup])
   
     return(
-        <div className="w-[100%] p-[20px]" style={{height:'650px',display:'flex',flexDirection:'column'}}>
+        <div id='sidebar-container' className="w-[100%] p-[20px]" style={{display:'flex',flexDirection:'column'}}>
 
            <div style={{flex:0.8}}>
       <DropdownMenu>
