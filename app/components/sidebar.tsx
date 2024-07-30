@@ -67,7 +67,7 @@ const SideNavigation: React.FC<SideNavigationProp> = ({changePage}) =>{
   useEffect(()=>{
     const container_element = document.getElementById('sidebar-container') as HTMLDivElement
     if(container_element){
-     container_element.style.height = window.innerHeight + 14 + 'px'
+     container_element.style.height = window.innerHeight + 'px'
     
     }
 
