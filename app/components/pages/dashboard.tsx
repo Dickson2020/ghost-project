@@ -68,7 +68,7 @@ export default function DashboardView(){
                     </div>
                 </Card>
 
-                <Card className='task-card mt-[-40px]'>
+                <Card className='task-card mt-[0px]'>
                     <CardContent>
                         <p className='task-card-duration mt-[12px]'>4 Jun -- 6 Jun</p>
                         <h3 className='task-card-title mt-[10px]'>Design Homepage</h3>

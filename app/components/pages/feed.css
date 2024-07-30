@@ -257,7 +257,7 @@
 
 .message-feed-view{
     overflow-y: scroll;
-    height: 90%;  
+     flex:1; 
     -ms-overflow-style: none;  
 }
 .message-feed-view::-webkit-scrollbar{
@@ -269,7 +269,7 @@
     padding: 20px;
     display: flex;
     flex-direction: row;
-    height: 10%;
+    flex:0.07;
 }
 
 
