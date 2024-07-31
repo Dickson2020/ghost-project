@@ -400,7 +400,13 @@
     cursor: pointer;
 
 }
-
+.create-task-grid-item-2{
+    width: 160px;
+    height: 32px;
+    display: grid;
+    grid-template-columns: 1fr 0.1fr;
+    cursor: pointer;
+}
 .create-task-grid-item-icon-left{
     font-size: 12px;
     opacity: 0.6;
@@ -432,6 +438,7 @@
 
 .browse-developers{
     cursor: pointer;
+    font-family: 'Inter-regular';
 }
 
 

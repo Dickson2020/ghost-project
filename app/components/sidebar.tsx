@@ -67,7 +67,7 @@ const SideNavigation: React.FC<SideNavigationProp> = ({changePage}) =>{
   useEffect(()=>{
     const container_element = document.getElementById('sidebar-container') as HTMLDivElement
     if(container_element){
-     container_element.style.height = window.innerHeight + 'px'
+     container_element.style.height = window.innerHeight - 2 + 'px'
     
     }
 
@@ -112,9 +112,9 @@ const SideNavigation: React.FC<SideNavigationProp> = ({changePage}) =>{
   },[currentTabPopup])
   
     return(
-        <div id='sidebar-container' className="w-[100%] p-[20px]" style={{display:'flex',flexDirection:'column'}}>
+        <div id='sidebar-container' className="sidebar-container">
 
-           <div style={{flex:0.8}}>
+           <div>
       <DropdownMenu>
       <DropdownMenuTrigger asChild>
        
@@ -461,7 +461,7 @@ const SideNavigation: React.FC<SideNavigationProp> = ({changePage}) =>{
             </ul>
            </div>
 
-          <div style={{flex:0.3}}>
+          <div>
           <ul className="mt-[0px]">
                 <li className="nav-list-menu-divider">
                 <div onClick={()=>setCurrentTab("support")} className={currentTab == "support"?

@@ -1,7 +1,7 @@
 import './kanban.css'
 import { Card, CardContent, CardFooter } from '@/components/ui/card'
 import { AvatarFallback, AvatarImage, Avatar } from "@/components/ui/avatar";
-import { FaPlus, FaSliders } from "react-icons/fa6";
+import { FaCalendar, FaPlus, FaSliders } from "react-icons/fa6";
 import { useEffect, useState } from 'react';
 import { FaCheckCircle, FaRegCircle } from 'react-icons/fa';
 import { RiProgress4Line } from 'react-icons/ri';
@@ -23,15 +23,24 @@ import {
     DropdownMenuTrigger,
   } from "@/components/ui/dropdown-menu"
 import { GoTriangleDown, GoTriangleRight } from 'react-icons/go';
-  
+import { FaSort } from 'react-icons/fa6'
+
 import { BiSolidInbox } from "react-icons/bi";
 import { Switch } from '@/components/ui/switch';
 import {Sheet,SheetContent, SheetTrigger, SheetFooter, SheetClose} from "@/components/ui/sheet";
-
+ 
+import { cn } from "@/lib/utils"
+import { Button } from "@/components/ui/button"
+import { Calendar } from "@/components/ui/calendar"
+import { addDays, format } from "date-fns"
+import { DateRange } from "react-day-picker"
 
 export default function KanbanView(){
-
-   const [current_create_task_status, set_new_create_task_status] = useState('todo_option')
+    const [date, setDate] = useState<DateRange | undefined>({
+        from: new Date(2022, 0, 20),
+        to: addDays(new Date(2022, 0, 20), 20),
+      })
+         const [current_create_task_status, set_new_create_task_status] = useState('todo_option')
    const [statusElement, setStatusElement] = useState<JSX.Element>( 
    <Card className='create-task-grid-item p-[10px]'>
     <FaRegCircle className='create-task-grid-item-icon-left' />
@@ -142,18 +151,14 @@ export default function KanbanView(){
                 <DropdownMenuContent className='w-[170px]'>
                     <DropdownMenuItem>
                     <div className='create-task-grid-item p-[10px]'>
-                    <FaRegCircle className='create-task-grid-item-icon-left progress-icon hide-elem' />
                     <h3 className='create-task-grid-item-text'>Manual</h3>
-                    <GoTriangleDown className='create-task-grid-item-icon-right hide-elem'/>
 
                   </div> 
                     </DropdownMenuItem>
 
                     <DropdownMenuItem>
                     <div className='create-task-grid-item p-[10px]' >
-                    <FaRegCircle className='create-task-grid-item-icon-left progress-icon hide-elem' />
                     <h3 className='create-task-grid-item-text'>Another option</h3>
-                    <GoTriangleDown className='create-task-grid-item-icon-right hide-elem'/>
 
                   </div> 
                     </DropdownMenuItem>
@@ -195,7 +200,7 @@ export default function KanbanView(){
                     <div className='create-team-dialog-footer-button-tip'>N</div>
                 </Card>
                 </SheetTrigger>
-                <SheetContent className='create-task-sheet'>
+                <SheetContent className='create-task-sheet w-[350px]'>
                     <div className='create-new-task-modal p-[0px]'>
                         
             <div className='create-task-view1'>
@@ -299,6 +304,44 @@ export default function KanbanView(){
                </div>
                      
             </div>
+
+            <div className='grid grid-cols-1 mt-[15px]'>
+            <h4 className='view-labels'>Duration</h4>
+           
+              <DropdownMenu>
+              <DropdownMenuTrigger asChild>
+                 
+          <Card className='create-task-grid-item browse-developers p-[10px]'>
+                <FaCalendar className='create-task-grid-item-icon-left' />
+                <h3 className='create-task-grid-item-text pt-[2px] ml-[-10px]'> {date?.from ? (
+              date.to ? (
+                <>
+                  {format(date.from, "LLL dd, y")} -{" "}
+                  {format(date.to, "LLL dd, y")}
+                </>
+              ) : (
+                format(date.from, "LLL dd, y")
+              )
+            ) : (
+              <span>Select date...</span>
+            )}</h3>
+                <FaSort className='create-task-grid-item-icon-right mt-[-1.5px]'/>
+                </Card>
+      </DropdownMenuTrigger>
+      <DropdownMenuContent   className='w-[600px] ml-[-490px] mt-[-100px]'
+      >
+       <Calendar
+            initialFocus
+            mode="range"
+            defaultMonth={date?.from}
+            selected={date}
+            onSelect={setDate}
+            numberOfMonths={2}
+            className='w-[400px]'
+          />
+      </DropdownMenuContent>
+    </DropdownMenu>
+</div>
             </div>
 
             <div className='mt-[10px]'>
@@ -308,8 +351,7 @@ developers assigned to subtasks</p>
             </div>
              <div className='grid grid-cols-2 mt-[10px]'>
             
-             <Card className='create-task-grid-item browse-developers p-[10px]'>
-                <FaRegCircle className='create-task-grid-item-icon-left hide-elem' />
+             <Card className='create-task-grid-item-2 browse-developers p-[10px]'>
                 <h3 className='create-task-grid-item-text pt-[2px] ml-[-10px]'>Browse Developers</h3>
                 <GoTriangleRight className='create-task-grid-item-icon-right mt-[-1.5px]'/>
                 </Card>

@@ -90,3 +90,11 @@
     font-family: 'Inter-regular';
     font-size: 11.2px;
 }
+
+
+.sidebar-container{
+    display: grid;
+    grid-template-rows: 1fr 0.35fr;
+    padding: 10px;
+    width: 100%;
+}

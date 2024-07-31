@@ -44,6 +44,7 @@ export default function FeedView(){
 
   const [feedType,setFeedType] = useState('in_app')
   const [createPollDialog, setCreatePollDialog] = useState(false)
+  const [replySystem, setReplySystem] = useState(false)
 
   useEffect(()=>{
     const container_element = document.getElementById('feed-container') as HTMLDivElement
@@ -97,10 +98,10 @@ export default function FeedView(){
 
           
       <div className='feed-view-top-title-div'>
-                <h3 className='feed-top-view-title ml-[10px] mt-[-10px]'>
+                <h3 className='feed-top-view-title ml-[10px] mt-[-10px] pt-[5px]'>
                   {feedType == 'in_app'? 'Feed' : 'Glasspane'}
                 </h3>
-                <FaSort className="feed-top-view-icon mt-[-9.6px]"/>
+                <FaSort className="feed-top-view-icon mt-[-7.6px]"/>
 
                 </div>
         
@@ -143,7 +144,7 @@ export default function FeedView(){
 
                 
 
-        <Card className='feed-top-bar-selection ml-[6px] mt-[2.5px]' onClick={()=>setFeedType(feedType == 'in_app'? 'discord_chats' : 'in_app')}>
+        <Card className='feed-top-bar-selection ml-[6px] mt-[0.5px]' onClick={()=>setFeedType(feedType == 'in_app'? 'discord_chats' : 'in_app')}>
                    <p className='feed-top-bar-selection-text'>View {feedType == 'in_app'? 'Feed' : 'Glasspane'}</p>
                    <div className='feed-top-bar-selection-text-icon'>⌘V</div>
                 </Card>
@@ -231,7 +232,13 @@ end of the week?</p>
                    <CustomProgressBar />
                    <CustomProgressBar2 />
 
-                    <Card className='message-replies'>
+                    <Card className='message-replies' onClick={()=> {
+                    if(replySystem){
+                    setReplySystem(false)
+                    }else{
+                       setReplySystem(true)
+
+                    }}}>
                     <div className='message-container-top-view-reply'>
                     <Avatar className="message-container-top-view-avatar">
                   <AvatarImage src="https://github.com/shadcn.png" alt="@shadcn" />
@@ -241,9 +248,18 @@ end of the week?</p>
 
                 <p className='message-container-top-view-username-reply ml-[6px]'>Olivia Patel</p>
                 <p className='message-container-top-view-reply-message'>NOOO please</p>
-                <GoTriangleRight className='message-container-top-view-reply-icon'/>
+                {replySystem?  <GoTriangleDown className='message-container-top-view-reply-icon'/> :  <GoTriangleRight className='message-container-top-view-reply-icon'/> }
+               
                     </div>
                     <p className='message-container-top-view-reply-count' style={{fontFamily:'Inter-bold'}}>4 replies</p>
+                    {replySystem? 
+                    
+                    <Card className='more-replies-messages'>
+
+                    </Card>
+
+                       : <div />}
+                   
                     </Card>
                     
                     </div>
@@ -389,7 +405,11 @@ invaluable to our projects success</p>
                 </div>}
 
 
-                <div className='feed-bottom-view'>
+
+            </div>
+
+            
+            <div className='feed-bottom-view'>
                 <Card className='bottom-input-card'>
                 <input className='bottom-input-element focus:outline-none' placeholder='Send a message..'/>
 
@@ -447,8 +467,6 @@ invaluable to our projects success</p>
                     <p className='markdown-support-text'>is supported</p>
 
                 </div>
-            </div>
-
             </div>
 
         {createPollDialog? <div className='custom-create-poll-dialog-container' id='custom-create-poll-dialog-container' onClick={(event)=>closeModal(event)}> 
@@ -514,7 +532,9 @@ invaluable to our projects success</p>
             </div>
 
 
-            </div></div> : <div/>}</div>
+            </div></div> : <div/>}
+            
+            </div>
       
       )
 }
