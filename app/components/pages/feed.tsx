@@ -29,7 +29,7 @@ import React, { useEffect, useState } from 'react'
 import { BsFillArrowUpRightCircleFill } from "react-icons/bs";
 import { FaRegCircle } from "react-icons/fa";
 
-
+import {ScrollArea} from  "@/components/ui/scroll-area"
 import {
   Popover,
   PopoverContent,
@@ -153,7 +153,7 @@ export default function FeedView(){
               
             </div>
 
-            <div className='message-feed-view'>
+            <ScrollArea className='message-feed-view'>
               {feedType == 'in_app'? 
               <div>
                 <div className='message-container-view'>
@@ -406,7 +406,7 @@ invaluable to our projects success</p>
 
 
 
-            </div>
+            </ScrollArea>
 
             
             <div className='feed-bottom-view'>

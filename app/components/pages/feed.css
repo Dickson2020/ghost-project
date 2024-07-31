@@ -55,9 +55,8 @@
 }
 
 .feed-container{
-    display: grid;
-    grid-template-rows: 0.09fr 1fr 0.09fr;
-
+    display: flex;
+    flex-direction: column;
     background: rgba(0, 0, 0, 0.015);
     border-right: 1px solid rgba(0, 0, 0, 0.08);
 
@@ -131,9 +130,10 @@
     width:100%;
     display: flex;
     flex-direction: column;
-    padding: 26px;
-    padding-top: 0px;
+    padding-left: 26px;
+    padding-right: 26px;
     align-content: baseline;
+    flex:0.05;
     
     
     
@@ -256,18 +256,17 @@
 
 .message-feed-view{
     width: 100%;
-    overflow-y: scroll;
-    -ms-overflow-style: none;  
-}
-.message-feed-view::-webkit-scrollbar{
-    display: none;
+    flex: 1;
+    
 }
 
 .feed-top-view{
     width:100%;
     padding: 20px;
     display: flex;
+    padding-bottom: 5px;
     flex-direction: row;
+    flex: 0.01;
 
     
 }
