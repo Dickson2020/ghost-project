@@ -10,6 +10,16 @@ import { FaCalendar, FaPlus, FaSliders } from "react-icons/fa6";
 import { FaSort } from 'react-icons/fa6'
 import {ScrollArea} from "@/components/ui/scroll-area";
 import {
+    LineChart,
+    ResponsiveContainer,
+    Legend,
+    Tooltip,
+    Line,
+    XAxis,
+    YAxis,
+    CartesianGrid,
+} from "recharts";
+import {
     DropdownMenu,
     DropdownMenuContent,
     DropdownMenuGroup,
@@ -23,6 +33,7 @@ import {
     DropdownMenuSubTrigger,
     DropdownMenuTrigger,
   } from "@/components/ui/dropdown-menu"
+import CustomToolTip from './chart-tooltip';
 
 export default function DashboardView(){
 
@@ -30,6 +41,101 @@ export default function DashboardView(){
         from: new Date(2022, 0, 20),
         to: addDays(new Date(2022, 0, 20), 20),
       })
+
+      const pdata = [
+        {
+            name: "MongoDb",
+            started: 11,
+            complete: 120,
+            estimate: 80,
+            value:{
+                date:'30 may',
+                started:'243 points',
+                complete:'211 points',
+                estimate:'$1,512'
+            }
+        },
+       
+        {
+            name: "MongoDb",
+            started: 51,
+            complete: 20,
+            estimate: 70,
+            value:{
+                date:'30 may',
+                started:'243 points',
+                complete:'211 points',
+                estimate:'$1,512'
+            }
+        },
+       
+        {
+            name: "MongoDb",
+            started: 61,
+            complete: 100,
+            estimate: 170,
+            value:{
+                date:'30 may',
+                started:'243 points',
+                complete:'211 points',
+                estimate:'$1,512'
+            }
+        },
+       
+        {
+            name: "MongoDb",
+            started: 65,
+            complete: 45,
+            estimate: 96,
+            value:{
+                date:'30 may',
+                started:'243 points',
+                complete:'211 points',
+                estimate:'$1,512'
+            }
+        },
+       
+        {
+            name: "MongoDb",
+            started: 25,
+            complete: 15,
+            estimate: 76,
+            value:{
+                date:'30 may',
+                started:'243 points',
+                complete:'211 points',
+                estimate:'$1,512'
+            }
+        },
+        
+        {
+            name: "MongoDb",
+            started: 100,
+            complete: 85,
+            estimate: 46,
+            value:{
+                date:'30 may',
+                started:'243 points',
+                complete:'211 points',
+                estimate:'$1,512'
+            }
+        },
+       
+        {
+            name: "MongoDb",
+            started: 95,
+            complete: 5,
+            estimate: 36,
+            value:{
+                date:'30 may',
+                started:'243 points',
+                complete:'211 points',
+                estimate:'$1,512'
+            }
+        }
+       
+
+    ];
 
     useEffect(()=>{
         const container_element = document.getElementById('dashboad-container') as HTMLDivElement
@@ -126,7 +232,23 @@ export default function DashboardView(){
                 <Card className='h-[30px] view-history-button'>View History</Card>
 
                 </div>
-                <div  className='dashboard-chart-view-chart'></div>
+                <div  className='dashboard-chart-view-chart'>
+                <ResponsiveContainer width="100%">
+
+                <LineChart width={390} height={190} data={pdata} >
+                    <CartesianGrid/>
+                    <Tooltip content={ <CustomToolTip />} cursor={{fill:'transparent'}}/>
+                    <Line
+                        dataKey="started"
+                        stroke="#FF9E1C"
+                        activeDot={{ r: 2 }}
+                    />
+                    <Line dataKey="complete" stroke="#0c8ce9" activeDot={{ r: 2 }} />
+                       <Line dataKey="estimate" stroke="#00B562" activeDot={{ r: 2 }} />
+
+                </LineChart>
+</ResponsiveContainer>
+                </div>
                 <div  className='dashboard-chart-view-bottom'>
                     <h4 className='dashboard-chart-view-bottom-text-left'>3 Apr</h4>
                     <h4 className='dashboard-chart-view-bottom-text-right'>27 Jun</h4>

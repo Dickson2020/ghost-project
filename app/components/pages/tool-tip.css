@@ -1,0 +1,80 @@
+@font-face {
+    font-family: 'Inter1';
+    src: url('../../../fonts/Inter/static/Inter-Light.ttf');
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Inter-regular';
+    src: url('../../../fonts/Inter/static/Inter-Regular.ttf');
+    font-style: normal;
+    font-weight:600;
+
+}
+
+@font-face {
+    font-family: 'Inter-bold';
+    src: url('../../../fonts/Inter/static/Inter-Bold.ttf');
+    font-style: normal;
+    font-weight:400;
+
+}
+
+@font-face {
+    font-family: 'Inter-semibold';
+    src: url('../../../fonts/Inter/static/Inter-SemiBold.ttf');
+    font-style: normal;
+    font-weight:400;
+
+}
+
+.custom-tooltip{
+    padding:10px;
+    width:auto;
+    height:auto;
+}
+
+.colored-label-icon-1{
+    width:10px;
+    height:10px;
+    border-radius:100px;
+    background:#FF9E1C;
+}
+
+.colored-label-icon-2{
+    width:10px;
+    height:10px;
+    border-radius:100px;
+    background:#0c8ce9;
+}
+
+.colored-label-icon-3{
+    width:10px;
+    height:10px;
+    border-radius:100px;
+    background:#00B562;
+}
+
+.label-text{
+ font-size:12px;
+ font-family: 'Inter-regular';
+ font-weight: 500;
+ opacity: 0.56;
+ text-align: left;
+ margin-top: -5px;
+}
+
+
+.tooltip-date{
+    font-family: 'Inter-regular';
+    opacity: 0.5;
+    font-size: 12px;
+    padding-bottom: 10px;
+}
+
+.grid-tooltip-item{
+    display: grid;
+    grid-template-columns: 0.1fr 1fr;
+    margin-top:4px;
+    gap: 5px;
+}
