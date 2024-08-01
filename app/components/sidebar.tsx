@@ -65,6 +65,7 @@ const SideNavigation: React.FC<SideNavigationProp> = ({changePage}) =>{
 
   },[currentTab])
 
+  
   useEffect(()=>{
     const container_element = document.getElementById('sidebar-container') as HTMLDivElement
     if(container_element){
@@ -466,12 +467,12 @@ const SideNavigation: React.FC<SideNavigationProp> = ({changePage}) =>{
               <div className="grid grid-cols-2">
               <Avatar className="h-[25px] w-[25px] nav-side-pop-item-avatar nav-list-item-icon" style={{opacity:'1'}}>
                   <AvatarImage src="https://github.com/shadcn.png" alt="@shadcn" />
-                  <AvatarFallback style={{zIndex:'1000',borderRadius:'100px',width:'25px',height:'25px',backgroundColor:'#ccc',border:'0.5px solid gray'}}></AvatarFallback>
+                  <AvatarFallback style={{borderRadius:'100px',width:'35px',height:'35px',backgroundColor:'#dddddd',border:'0.5px solid gray'}}></AvatarFallback>
                   
                 </Avatar>
                 <Avatar className="h-[25px] w-[25px] nav-side-pop-item-avatar nav-list-item-icon ml-[-20px]" style={{opacity:'1'}}>
                   <AvatarImage src="https://github.com/shadcn.png" alt="@shadcn" />
-                  <AvatarFallback style={{zIndex:'1000',borderRadius:'100px',width:'25px',height:'25px',backgroundColor:'#ccc',border:'0.5px solid gray'}}></AvatarFallback>
+                  <AvatarFallback style={{borderRadius:'100px',width:'35px',height:'35px',backgroundColor:'#dddddd',border:'0.5px solid gray'}}></AvatarFallback>
                   
                 </Avatar>
               </div>

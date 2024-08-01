@@ -159,20 +159,24 @@ export default function DashboardView(){
                 soundscapes. Participants contribute various sounds, from everyday noises to musical snippets
                 </Card>
 
+                
+
             </div>
 
+           
+
+
+            <ScrollArea className='task-render-dashboard'>
             <div className='before-render-data'>
                 <p className='before-render-data-text mt-[-3px]'>This weeks tasks</p>
                 <FaPlus className='before-render-data-icon  mt-[-5px]' />
             </div>
 
-
-            <ScrollArea className='task-render-dashboard'>
            <div className='pb-[10px] chart-view'> 
            <Card className='dashboard-chart-view'>
                 <div  className='dashboard-chart-view-top pt-[6px]'>
                     <div className='grid grid-rows-2'>
-                        <h4 className='dashboard-chart-view-top-title ml-[10px] mt-[0px]'>Progress</h4>
+                        <h4 className='dashboard-chart-view-top-title ml-[10px] mt-[-12]'>Progress</h4>
                         <div className='grid grid-cols-3 gap-2 ml-[10px]'>
                         <div className='grid grid-cols-2 h-[10px]'>
               
@@ -235,8 +239,8 @@ export default function DashboardView(){
                 <div  className='dashboard-chart-view-chart'>
                 <ResponsiveContainer width="100%">
 
-                <LineChart width={390} height={190} data={pdata} >
-                    <CartesianGrid/>
+                <LineChart  width={390} height={190} data={pdata} >
+                    <CartesianGrid />
                     <Tooltip content={ <CustomToolTip />} cursor={{fill:'transparent'}}/>
                     <Line
                         dataKey="started"
@@ -278,9 +282,14 @@ export default function DashboardView(){
         
                 </Avatar>
 
-                <div className="avatar-icon ml-[-13px]" style={{zIndex:'1000',justifyContent:'center',display:'flex',flexDirection:'column',borderRadius:'100px',background:'#ccc',width:'22px',height:'22px',border:'1px solid #ccc'}}>
+                <Avatar className="avatar-icon ml-[-13px]" style={{justifyContent:'center',display:'flex',flexDirection:'column',borderRadius:'100px',background:'#ccc',width:'22px',height:'22px',border:'1px solid #ccc'}}>
+                   <AvatarFallback >
                    <FaPlus style={{justifyContent:'center',justifySelf:'center',alignSelf:'center',fontSize:'12px',color:'black'}}/>
-                </div>
+
+                   </AvatarFallback>
+
+                
+                </Avatar>
                         
                     </div>
                     <p className='task-card-points'>16pts</p>
@@ -309,9 +318,14 @@ export default function DashboardView(){
 
 </Avatar>
 
-<div className="avatar-icon ml-[-13px]" style={{zIndex:'1000',justifyContent:'center',display:'flex',flexDirection:'column',borderRadius:'100px',background:'#ccc',width:'22px',height:'22px',border:'1px solid #ccc'}}>
-<FaPlus style={{justifyContent:'center',justifySelf:'center',alignSelf:'center',fontSize:'12px',color:'black'}}/>
-</div>
+<Avatar className="avatar-icon ml-[-13px]" style={{justifyContent:'center',display:'flex',flexDirection:'column',borderRadius:'100px',background:'#ccc',width:'22px',height:'22px',border:'1px solid #ccc'}}>
+                   <AvatarFallback >
+                   <FaPlus style={{justifyContent:'center',justifySelf:'center',alignSelf:'center',fontSize:'12px',color:'black'}}/>
+
+                   </AvatarFallback>
+
+                
+                </Avatar>
     
 </div>
                     <p className='task-card-points'>8pts</p>
