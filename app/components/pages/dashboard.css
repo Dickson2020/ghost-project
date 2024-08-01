@@ -29,8 +29,8 @@
 }
 
 .dashboad-container{
-    display: grid;
-   grid-template-rows:  0.4fr 0.07fr 1fr ;
+    display: flex;
+    flex-direction: column;
     height: 100%;
 }
 
@@ -39,6 +39,9 @@
     height: 155px;
     border-bottom: 2px solid rgba(0, 0, 0, 0.08);
     padding: 20px;
+    padding-bottom: 0px;
+    flex: 0.1;
+
 }
 
 .top-view-text{
@@ -71,6 +74,8 @@
     gap: 12px;
     padding: 30px;
     padding-top: 0px;
+    padding-bottom: 4px;
+    flex:1;
     
 }
 .view-history-button{
@@ -151,6 +156,8 @@
     flex-direction: row;
     justify-content: space-between;
     margin-top: 0px;
+    flex:0.05;
+    padding-top: 7px;
     
 }
 
