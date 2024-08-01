@@ -404,3 +404,20 @@
     opacity: 0.8;
 }
 
+.sidebar-online-users{
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: 1fr 0.1fr 0.09fr;
+}
+
+.sidebar-online-users-title{
+    font-family: 'Inter-semibold';
+    font-size: 12px;
+    opacity: 0.6;
+
+}
+
+.sidebar-online-users-icon{
+    opacity: 0.8;
+}

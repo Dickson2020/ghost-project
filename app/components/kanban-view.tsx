@@ -40,6 +40,8 @@ export default function KanbanView(){
         from: new Date(2022, 0, 20),
         to: addDays(new Date(2022, 0, 20), 20),
       })
+
+      const [displaySortType, setDisplaySortType] = useState('Manual')
          const [current_create_task_status, set_new_create_task_status] = useState('todo_option')
    const [statusElement, setStatusElement] = useState<JSX.Element>( 
    <Card className='create-task-grid-item p-[10px]'>
@@ -144,21 +146,21 @@ export default function KanbanView(){
            <DropdownMenu>
                     <DropdownMenuTrigger asChild>
                     <Card className='w-[100%] h-[35px] grid grid-cols-2 p-[8px] mt-[0px] kanban-settings-selection'>
-            <h4 className='kanban-settings-popup-item-text'>manual</h4>
+            <h4 className='kanban-settings-popup-item-text'>{displaySortType}</h4>
             <GoTriangleDown className='kanban-settings-popup-item-icon ml-[90px] mt-[0.5px]'/>
            </Card> 
                     </DropdownMenuTrigger>
                 <DropdownMenuContent className='w-[170px]'>
                     <DropdownMenuItem>
-                    <div className='create-task-grid-item p-[10px]'>
+                    <div className='create-task-grid-item p-[10px]' onClick={()=>setDisplaySortType('Manual')}>
                     <h3 className='create-task-grid-item-text'>Manual</h3>
 
                   </div> 
                     </DropdownMenuItem>
 
                     <DropdownMenuItem>
-                    <div className='create-task-grid-item p-[10px]' >
-                    <h3 className='create-task-grid-item-text'>Another option</h3>
+                    <div className='create-task-grid-item p-[10px]' onClick={()=>setDisplaySortType('Automatic')}>
+                    <h3 className='create-task-grid-item-text'>Automatic</h3>
 
                   </div> 
                     </DropdownMenuItem>

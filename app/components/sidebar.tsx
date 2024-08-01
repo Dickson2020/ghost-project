@@ -36,6 +36,7 @@ import { HiDocumentArrowUp } from "react-icons/hi2";
 import CreateTeamView from "./pages/create-team";
 import MembersView from "./pages/members-view";
 import BillingView from "./pages/billing-view";
+import { GoTriangleRight } from "react-icons/go";
 
 
 
@@ -459,6 +460,23 @@ const SideNavigation: React.FC<SideNavigationProp> = ({changePage}) =>{
 
 
             </ul>
+
+            <div className="sidebar-online-users p-[20px] pl-[15px] pr-[25px] pt-[0px]">
+              <p className="sidebar-online-users-title">Online</p>
+              <div className="grid grid-cols-2">
+              <Avatar className="h-[25px] w-[25px] nav-side-pop-item-avatar nav-list-item-icon" style={{opacity:'1'}}>
+                  <AvatarImage src="https://github.com/shadcn.png" alt="@shadcn" />
+                  <AvatarFallback style={{borderRadius:'100px',width:'25px',height:'25px',backgroundColor:'#ccc',border:'0.5px solid gray'}}></AvatarFallback>
+                  
+                </Avatar>
+                <Avatar className="h-[25px] w-[25px] nav-side-pop-item-avatar nav-list-item-icon ml-[-20px]" style={{opacity:'1'}}>
+                  <AvatarImage src="https://github.com/shadcn.png" alt="@shadcn" />
+                  <AvatarFallback style={{zIndex:'1000',borderRadius:'100px',width:'25px',height:'25px',backgroundColor:'#ccc',border:'0.5px solid gray'}}></AvatarFallback>
+                  
+                </Avatar>
+              </div>
+              <GoTriangleRight className="sidebar-online-users-icon"/>
+            </div>
            </div>
 
           <div>
