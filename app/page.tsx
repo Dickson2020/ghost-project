@@ -6,6 +6,7 @@ import DashboardView from './components/pages/dashboard';
 import FeedView from './components/pages/feed';
 import { useEffect, useState } from 'react';
 import KanbanView from './components/kanban-view';
+import RoadmapView from './components/roadmap';
 
 export default function Home() {
 
@@ -65,6 +66,19 @@ export default function Home() {
         <div>
 
           <KanbanView />
+
+        </div>
+      )
+
+      break;
+
+
+      case 'roadmap':
+
+      element = (
+        <div>
+
+          <RoadmapView />
 
         </div>
       )
