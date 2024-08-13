@@ -103,26 +103,29 @@ export default function RoadmapView(){
 
       if(taskTipsReducer < 1){
         taskTipsReducer++
-        return <div className='new-entry-tip'> New rows are created when tasks have conflicting duration. </div> 
+        return <div key={taskTipsReducer} className='new-entry-tip'> New rows are created when tasks have conflicting duration. </div> 
       }else{
         taskTipsReducer++
-        return <div />
+        return <div key={taskTipsReducer}/>
       }
 
     }
 
+
+    let statusIncrement = 0
     function renderIcon(status: string){
       let elem = (<div />)
 
       switch(status){
         case 'completed':
-          return <FaCheckCircle className='w-[10px] h-[10px] completed-cion mt-[5px]' />
+          return <FaCheckCircle key={statusIncrement} className='w-[10px] h-[10px] completed-cion mt-[5px]' />
         case 'progress':
-          return <RiProgress4Line className='w-[10px] h-[10px] progress-icon mt-[5px]' />
+          return <RiProgress4Line key={statusIncrement} className='w-[10px] h-[10px] progress-icon mt-[5px]' />
         case 'todo':
-          return <FaRegCircle className='w-[10px] h-[10px] mt-[5px]' />
+          return <FaRegCircle key={statusIncrement} className='w-[10px] h-[10px] mt-[5px]' />
             
       }
+      statusIncrement++
     }
     function renderTasks(value: roadMapTaskInterface, index: number, row: number){
       let elm = (
@@ -194,6 +197,7 @@ export default function RoadmapView(){
           let str_week_day = (days_str[week_counter] == undefined)? "Mon " + days_in_month : days_str[week_counter] + " " + days_in_month
          
           let roadmap_task_cluster = []
+          
         for(let roadmap_task = 0; roadmap_task <= roadMapTasks.length - 1; roadmap_task++){
           if(roadMapTasks[roadmap_task].duration_month == month && month <= 1 ){
            roadmap_task_cluster.push(
@@ -595,26 +599,26 @@ developers assigned to subtasks</p>
 
                      
 
-                     <div className='roadmap-item-week-days-view'>
+                     <div className='roadmap-item-week-days-view' key={obj_val.index + 2}>
 
                      {
                         obj_val.day.map((val, index)=>(
-                         <div key={obj_val.index} className='roadmap-weekday-item-date'>{
+                         <div key={obj_val.index + 3} className='roadmap-weekday-item-date'>{
                         val
                       } </div> 
                         ))
                       }
                       </div>
 
-                      <div className='w-[100%]'>
+                      <div className='w-[100%]' key={obj_val.index + 4}>
                         {
                           (taskRowsCount.map((val)=>(
                           
-                        <div className='task-line-seperator'>
+                        <div className='task-line-seperator' key={obj_val.index + 5}>
                         
                         {
                             obj_val.tasks.map((value, index) => (
-                              <div key={value.row + 2}> {renderTasks(value, index, val)} </div>
+                              <div key={value.row + 6}> {renderTasks(value, index, val)} </div>
                             ))
                            }
 
@@ -631,27 +635,27 @@ developers assigned to subtasks</p>
 
                     :
 
-                    <div className='roadmap-item' key={obj_val.index + 1}>
-                     <div className='roadmap-item-week-days-view'>
+                    <div className='roadmap-item' key={obj_val.index + 7}>
+                     <div className='roadmap-item-week-days-view' key={obj_val.index + 8}>
 
                      {
                         obj_val.day.map((val, index)=>(
-                      <div key={obj_val.index} className='roadmap-weekday-item-date'>{
+                      <div key={obj_val.index + 9} className='roadmap-weekday-item-date'>{
                         val
                       } </div>
                         ))
                       }
                       </div>
 
-                      <div className='w-[100%]'>
+                      <div className='w-[100%]' key={obj_val.index + 11}>
                         {
                           (taskRowsCount.map((val)=>(
                           
-                        <div className='task-line-seperator'>
+                        <div className='task-line-seperator' >
                         
                         {
                             obj_val.tasks.map((value, index) => (
-                              <div key={value.row + 2}> {renderTasks(value, index, val)} </div>
+                              <div key={value.row + 12}> {renderTasks(value, index, val)} </div>
                             ))
                            }
 

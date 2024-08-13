@@ -1,0 +1,630 @@
+@font-face {
+    font-family: 'Inter1';
+    src: url('../../fonts/Inter/static/Inter-Light.ttf');
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Inter-regular';
+    src: url('../../fonts/Inter/static/Inter-Regular.ttf');
+    font-style: normal;
+    font-weight:600;
+
+}
+
+@font-face {
+    font-family: 'Inter-bold';
+    src: url('../../fonts/Inter/static/Inter-Bold.ttf');
+    font-style: normal;
+    font-weight:400;
+
+}
+
+@font-face {
+    font-family: 'Inter-semibold';
+    src: url('../../fonts/Inter/static/Inter-SemiBold.ttf');
+    font-style: normal;
+    font-weight:400;
+
+}
+
+.file-container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.file-top-view{
+    width:100%;
+    height: 80px;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.08);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.top-view-text-file{
+   
+    background: rgba(255, 255, 255, 0.6);
+}
+
+.top-view-text-card-file{
+    width:100%;
+    background: rgba(255, 255, 255, 0.8);
+    font-size: 13px;
+    padding:10px;
+    font-family: 'Inter-regular';
+    opacity: 0.88;
+}
+.file-top-view-title{
+    font-size: 16px;
+    font-family: 'Inter-semibold';
+    opacity: 0.8;
+}
+.cursor-file{
+    cursor: pointer;
+}
+
+.task-render-file{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 30px;
+    padding-top: 0px;
+    gap: 10px;
+    
+}
+
+.task-card-file{
+    width: 100%;
+    height: 170px;
+    border-radius: 10px;
+    
+}
+
+.task-card-title-file{
+    font-weight: 500;
+    opacity: 0.8;
+    font-size: 13px;
+    font-family: 'Inter-semibold';
+
+}
+
+.task-card-description-file{
+    font-size: 12px;
+    opacity: 0.8;
+    font-family: 'Inter-regular';
+}
+
+.task-card-duration-file{
+    opacity: 0.8;
+    font-size: 12px;
+    font-family: 'Inter-regular';
+
+}
+
+.avatar-views-file{
+    display: inline-block;
+    width: 100%;
+    float: left;
+    flex: 0.1;
+    margin-left: 25px;
+}
+
+.task-card-footer-file{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin-top: -15px;
+}
+
+.task-card-budget-text-file{
+    flex: 1;
+    font-size: 12px;
+    padding-left: 10px;
+    color: rgba(12, 140, 233,0.7);
+    font-family: 'Inter-regular';
+
+}
+
+.task-card-points-file{
+    flex: 0.04;
+    font-size: 12px;
+    padding-left: 10px;
+    opacity: 0.77;
+    font-family: 'Inter-regular';
+
+}
+
+.before-render-data-controls{
+   
+}
+
+.before-render-data-file-items{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+    position: relative;
+}
+
+.before-render-data-icon-file{
+    font-size: 12px;
+    flex: 1;
+}
+
+.before-render-data-text-file{
+    font-size: 12px;
+    opacity: 0.78;
+    flex: 0.5;
+    font-family: 'Inter-semibold';
+
+}
+
+.completed-cion{
+    color:rgba(12, 140, 233,1);
+}
+
+.progress-icon{
+ color:#FF9E1C;
+}
+
+.before-render-data-file{
+    width: 100%;
+    height: 100%;
+    
+}
+
+.before-render-data-icon-file{
+    flex:0.12;
+    font-size: 12px;
+    text-align: center;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.plus-icon-circle{
+    opacity: 0.45;
+}
+
+.before-render-data-text-file{
+    flex:1;
+    opacity: 0.8;
+    font-size: 12px;
+    padding-left: 29px;
+    font-family: 'Inter-semibold';
+}
+
+
+
+.create-team-dialog-footer-button-no-design{
+    width: 80px;
+    height: 36px;
+    background-color:white;
+    padding: 7px;
+    cursor: pointer;
+    color: black;
+
+}
+.create-team-dialog-footer-button{
+    width: 100px;
+    height: 100%;
+    background-color: rgba(12, 140, 233,0.9);
+    display: grid;
+    grid-template-columns: 1fr 0.4fr;
+    padding: 7px;
+    cursor: pointer;
+}
+
+.create-team-dialog-footer-button-text{
+    font-size: 13px;
+    font-weight: 500;
+    opacity: 0.8;
+    text-align: center;
+    color: white;
+}
+
+
+.create-team-dialog-footer-button-text-no-design{
+    font-size: 13px;
+    font-weight: 500;
+    opacity: 0.8;
+    text-align: center;
+    color: black;
+}
+
+.create-team-dialog-footer-button-tip{
+    background: rgba(255, 255, 255,0.4);
+    font-size: 10.7px;
+    text-align: center;
+    color: white;
+    border-radius: 4px;
+    padding: 2px;
+    margin-top: -1px;
+}
+
+
+
+.create-team-dialog-footer-file{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+.file-settings-popup-title-view{
+    display: grid;
+    grid-template-columns: 0.1fr 1fr;
+    justify-content: center;
+    align-items: center;
+    height: 20px;
+}
+
+.file-settings-popup-title-view-with-switch{
+    display: grid;
+    grid-template-columns: 0.1fr 1fr 0.3fr;
+    justify-content: center;
+    align-items: center;
+    height: 20px;
+}
+.file-settings-popup-icon{
+    font-size:12px;
+    opacity:0.68;
+
+}
+
+.file-settings-popup-title{
+    font-family:'Inter-semibold';
+    font-size:12px;
+    opacity:0.8;
+   
+
+}
+
+.file-settings-popup-item-text{
+    font-family: 'Inter-semibold';
+    font-size:12px;
+    opacity:0.8;
+}
+
+.file-settings-popup-title-2{
+    font-family:'Inter-semibold';
+    font-size:12px;
+    opacity:0.8;
+}
+
+.properties-card-view{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5px;
+}
+
+.properties-badge-checked{
+    font-family:'Inter-regular';
+    font-size: 10.5px;
+    opacity: 0.96;
+    text-align: center;
+    padding: 4px;
+    border-radius: 15px;
+    height: 26px;
+    width: auto;
+    cursor: pointer;
+}
+
+
+.properties-badge-unchecked{
+    cursor: pointer;
+    font-family:'Inter-regular';
+    font-size: 10.5px;
+    opacity: 0.96;
+    background: none;
+    box-shadow: none;
+    outline: none;
+    border: none;
+    text-align: center;
+    padding: 7px;
+    width: auto;
+    height: 13px;
+
+}
+
+.file-settings-selection{
+    cursor: pointer;
+}
+
+.create-task-view1{
+
+    display: grid;
+    grid-template-columns: 0.1fr 1fr;
+    height: 20px;
+}
+
+
+.create-task-view1-icon{
+    font-size: 14px;
+    opacity: 0.8;
+    justify-self: center;
+    align-self: center;
+    cursor:pointer;
+}
+
+.create-task-view1-text{
+    opacity: 0.8;
+    margin-left: 10px;
+    font-family: 'Inter-bold';
+    font-size: 12px;
+
+}
+
+.create-new-task-modal {
+    
+}
+
+.create-task-sheet{
+    background: rgba(255, 255, 255,0.97);
+}
+
+.view-labels{
+    font-family:'Inter-semibold';
+    font-size: 12px;
+    opacity: 0.7;
+    margin-left: 10px;
+}
+.input-element-long{
+    width: 100%;
+    height: 27px;
+    box-shadow: none;
+    border: none;
+}
+
+.input-element-long-input{
+    font-family: 'Inter-regular';
+    font-size: 13px;
+    height: 32px;
+}
+
+.create-task-grid-item{
+    width: 100%;
+    height: 32px;
+    display: grid;
+    grid-template-columns: 0.1fr 1fr 0.1fr;
+    cursor: pointer;
+
+}
+.create-task-grid-item-2{
+    width: 160px;
+    height: 32px;
+    display: grid;
+    grid-template-columns: 1fr 0.1fr;
+    cursor: pointer;
+}
+.create-task-grid-item-icon-left{
+    font-size: 12px;
+    opacity: 0.6;
+    margin-top: -2.5px;
+}
+
+.create-task-grid-item-text{
+    font-size: 12.5px;
+    opacity: 0.9;
+    margin-top: -5.7px;
+    margin-left: 5px;
+    font-family: 'Inter-regular';
+    font-weight: 500;
+}
+
+.create-task-grid-item-icon-right{
+    font-size: 12px;
+    opacity: 0.6;
+}
+
+.hide-elem{
+    opacity:0;
+}
+
+.view-description{
+    font-size: 12px;
+    font-family: 'Inter-regular';
+}
+
+.browse-developers{
+    cursor: pointer;
+    font-family: 'Inter-regular';
+}
+
+
+
+.create-team-dialog-footer-button-no-design{
+    width: 80px;
+    height: 36px;
+    background-color:white;
+    padding: 7px;
+    cursor: pointer;
+    color: black;
+
+}
+.create-team-dialog-footer-button{
+    width: 100px;
+    height: 100%;
+    background-color: rgba(12, 140, 233,0.9);
+    display: grid;
+    grid-template-columns: 1fr 0.4fr;
+    padding: 7px;
+    cursor: pointer;
+}
+
+.create-team-dialog-footer-button-text{
+    font-size: 13px;
+    font-weight: 500;
+    opacity: 0.8;
+    text-align: center;
+    color: white;
+}
+
+
+.create-team-dialog-footer-button-text-no-design{
+    font-size: 13px;
+    font-weight: 500;
+    opacity: 0.8;
+    text-align: center;
+    color: black;
+}
+
+.create-team-dialog-footer-button-tip{
+    background: rgba(255, 255, 255,0.4);
+    font-size: 10.7px;
+    text-align: center;
+    color: white;
+    border-radius: 4px;
+    padding: 2px;
+    margin-top: -1px;
+}
+
+.developers-list-filer-item-title{
+    font-weight: 600;
+    opacity: 0.9;
+    font-size: 16px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.developers-list-filer-item-description{
+    font-size: 11px;
+}
+
+.developers-list-filer-item-title{
+    font-size: 12px;
+}
+
+.top-view-weekdays-scroll{
+    width: 100%;
+    height: 20px;
+    overflow-x: scroll;
+
+}
+
+.file-item{
+  width:380px;
+  height: calc(100vh/1.15);
+  
+  display: grid;
+  grid-template-rows: 0.04fr 1fr ;
+}
+
+
+
+.rt-gray{
+    background: rgba(0, 0, 0,0.02);
+}
+.scroll-view{
+    width:100%;
+    height: 100%;
+}
+
+.file-item-week-days-view{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    justify-items: center;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+    width: 100%;
+
+}
+
+.file-weekday-item-date{
+    color: black;
+    font-size: 10.8px;
+    flex: 1;
+    align-items: center;
+    align-self: center;
+    font-family: 'Inter-semibold';
+    opacity: 0.75;
+    text-align: center;
+}
+
+
+.file-task-view{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top:0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: yellow;
+}
+
+.task-line-seperator{
+    width:400px;
+    height: 50px;
+    border-bottom: 1px solid #e6e4e4;
+    margin-top: 10px;
+
+}
+
+.file-tasks-render-layout{
+    display: grid;
+    grid-template-columns: 0.05fr 1fr 0.5fr 0.2fr;
+}
+
+.budget-item-text{
+    color: #0c8ce9;
+    font-family: 'Inter-semibold';
+    opacity: 0.8;
+    font-size: 11.5px;
+}
+
+.title-item-text{
+    font-family: 'Inter-semibold';
+    opacity: 0.8;
+    font-size: 11.5px;
+    
+
+}
+
+
+.long-vertical-rule-line{
+   
+    height: calc(100vh/1.11);
+    position: absolute;
+    top: 10%;
+    display: grid;
+    grid-template-rows: 0.02fr 0.05fr 1fr;
+  }
+.long-vertical-rule-line-top-title{
+    width:60px;
+    height: 20px;
+    border-radius: 5px;
+    background-color: #0c8ce9;
+    padding: 4px;
+    text-align: center;
+    color: white;
+    font-family: 'Inter-semibold';
+    font-size: 10px;
+    opacity: 0.8;
+}
+
+
+.long-vertical-rule-line-light-blue{
+    background: rgba(12, 140, 233,0.2);
+    width:1.6px;
+}
+
+.long-vertical-rule-line-dark-blue{
+    background: #0c8ce9;
+    width:1.6px;
+
+}
+
+
+.new-entry-tip{
+ font-size: 11px;
+ opacity: 0.9;
+ font-family: 'Inter1';
+ padding: 20px;
+
+}
