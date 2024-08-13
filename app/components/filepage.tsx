@@ -39,7 +39,7 @@ export default function DocumentView(){
 
                 
 
-              {(pageTitle != "Files")? 
+              {(pageTitle != "Documents")? 
 
               <div className='page-title-grid'> 
 
