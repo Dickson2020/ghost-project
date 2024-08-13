@@ -3,7 +3,7 @@ import { RiHomeFill } from "react-icons/ri";
 import { RiMapFill } from "react-icons/ri";
 import { FaMoneyBills } from "react-icons/fa6";
 import { FaSliders } from "react-icons/fa6";
-import { FaSort } from "react-icons/fa6";
+import { FaSort, FaFile } from "react-icons/fa6";
 import { IoEllipsisHorizontal } from "react-icons/io5";
 import { FaCommentAlt, FaQuestionCircle, FaRegQuestionCircle } from "react-icons/fa";
 import { FaHeart } from "react-icons/fa6";
@@ -206,8 +206,9 @@ const SideNavigation: React.FC<SideNavigationProp> = ({changePage}) =>{
                  "nav-list-items nav-list-items-selected":
                  "nav-list-items"
                   }>
-                  <HiDocumentArrowUp className="nav-list-item-icon" />  
-                  <p className="nav-list-item-text">Files</p>
+                    
+                  <FaFile className="nav-list-item-icon" />  
+                  <p className="nav-list-item-text">Documents</p>
                   <div className="nav-list-item-right-icon">
                   </div>
                 </div>

@@ -58,9 +58,9 @@
     opacity: 0.88;
 }
 .file-top-view-title{
-    font-size: 16px;
+    font-size: 14px;
     font-family: 'Inter-semibold';
-    opacity: 0.8;
+    opacity: 0.7;
 }
 .cursor-file{
     cursor: pointer;
@@ -149,6 +149,7 @@
     align-items: center;
     justify-items: center;
     position: relative;
+   
 }
 
 .before-render-data-icon-file{
@@ -175,6 +176,7 @@
 .before-render-data-file{
     width: 100%;
     height: 100%;
+    
     
 }
 
@@ -641,4 +643,119 @@
     height: 34px;
     padding-left: 10px;
     font-size:12px;
+}
+
+.top-filter-icon{
+    height: 34px;
+    cursor: pointer;
+}
+
+.doc-filter{
+   
+    opacity: 0.6;
+    font-size: 13px;
+   
+}
+
+
+.before-render-data-file-titles{
+     font-family: 'Inter-semibold';
+     opacity: 0.7;
+     font-size:11.7px;
+
+}
+
+.before-render-data-file-container{
+    width: 100%;
+    height: auto;
+}
+
+
+
+.folder-col{
+    display: grid;
+    grid-template-columns: 0.06fr 1fr 0.1fr;
+    padding: 9px;
+}
+
+.folder-col-title{
+    font-family: 'Inter-semibold';
+    font-size: 11.5px;
+    opacity: 0.7;
+    text-align: left;
+    padding-left: 7px;
+    margin-top: -1px;
+}
+
+.folder-col-icon{
+ 
+     opacity: 0.64;
+     font-size: 11.5px;
+
+}
+
+.folder-col-avatar{
+   width:15px;
+   height:15px;
+}
+
+
+
+
+
+
+
+
+.file-col{
+    display: grid;
+    grid-template-columns: 0.06fr 1fr 0.1fr;
+    padding: 9px;
+}
+
+.file-col-title{
+    font-family: 'Inter-semibold';
+    font-size: 11.5px;
+    opacity: 0.7;
+    text-align: left;
+    padding-left: 7px;
+    margin-top: -1px;
+}
+
+.file-col-icon{
+ 
+     opacity: 0.64;
+     font-size: 11.5px;
+
+}
+
+.file-col-avatar{
+   width:15px;
+   height:15px;
+}
+
+.file-preview-container{
+    height: 170px;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.05);
+    border-radius: 10px;
+    padding:9px;
+}
+
+.file-preview-image{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+
+.pointer{
+    cursor: pointer;
+}
+
+
+.page-title-grid{
+    display: grid;
+    grid-template-columns: 0.5fr 0.2fr 1fr;
+    width:300px;
+
 }
