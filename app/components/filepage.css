@@ -250,7 +250,7 @@
 
 .create-team-dialog-footer-file{
     width: 100%;
-    height: auto;
+    height: 50px;
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
@@ -627,4 +627,18 @@
  font-family: 'Inter1';
  padding: 20px;
 
+}
+
+
+.search-doc-input{
+    padding:0px;
+    opacity: 0.89;
+    font-family: 'Inter-regular';
+    border:none;
+    outline:none;
+    
+    width:280px;
+    height: 34px;
+    padding-left: 10px;
+    font-size:12px;
 }

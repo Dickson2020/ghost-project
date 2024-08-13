@@ -651,7 +651,7 @@ developers assigned to subtasks</p>
                         {
                           (taskRowsCount.map((val)=>(
                           
-                        <div className='task-line-seperator' >
+                        <div className='task-line-seperator' key={obj_val.index + 14}>
                         
                         {
                             obj_val.tasks.map((value, index) => (

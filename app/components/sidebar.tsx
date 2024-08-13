@@ -202,12 +202,12 @@ const SideNavigation: React.FC<SideNavigationProp> = ({changePage}) =>{
 
                  <li className="nav-list-menu-divider">
 
-                <div onClick={()=>setCurrentTab("billing")} className={currentTab == "billing"?
+                <div onClick={()=>setCurrentTab("doc")} className={currentTab == "doc"?
                  "nav-list-items nav-list-items-selected":
                  "nav-list-items"
                   }>
-                  <FaMoneyBills className="nav-list-item-icon" />  
-                  <p className="nav-list-item-text">Billing</p>
+                  <HiDocumentArrowUp className="nav-list-item-icon" />  
+                  <p className="nav-list-item-text">Files</p>
                   <div className="nav-list-item-right-icon">
                   </div>
                 </div>
