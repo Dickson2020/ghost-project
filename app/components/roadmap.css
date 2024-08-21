@@ -390,11 +390,28 @@
 
 .create-task-grid-item{
     width: 100%;
-    height: 32px;
+    height: 24px;
     display: grid;
-    grid-template-columns: 0.1fr 1fr 0.1fr;
+    grid-template-columns: 1fr 0.2fr;
     cursor: pointer;
 
+}
+
+.create-task-item-grid-2{
+
+    width: 100%;
+    height: 31.7px;
+    display: grid;
+    grid-template-columns: 1fr 0.2fr;
+    cursor: pointer;
+}
+
+.create-task-grid-item{
+    width: 100%;
+    height: 25px;
+    display: grid;
+    grid-template-columns: 1fr;
+    cursor: pointer;
 }
 .create-task-grid-item-2{
     width: 160px;

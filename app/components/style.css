@@ -200,7 +200,6 @@
 .nav-top-user-icon{
     width: 30px;
     height: 100%;
-    background-color: #00B562;
     border-radius: 7px;
     transform: scale(0.8,0.8);
 }
@@ -353,6 +352,7 @@
 .nav-side-pop-item-text{
     font-size: 11px;
     font-family: 'Inter-regular';
+    text-align: left;
 }
 
 .nav-list-item-right-icon-text-right{
@@ -399,9 +399,24 @@
     border-radius: 5px;
 }
 
+.nav-top-pop-list-item-icon-2{
+    width:20px;
+    height: 20px;
+    background-color: #8032FF;
+    border-radius: 5px;
+}
+
+.nav-top-pop-list-item-icon-3{
+    width:20px;
+    height: 20px;
+    background-color: #FF9E1C;
+    border-radius: 5px;
+}
+
 .nav-top-pop-list-item-text{
     font-size: 9px;
     opacity: 0.8;
+    text-align: left;
 }
 
 .sidebar-online-users{
@@ -420,4 +435,17 @@
 
 .sidebar-online-users-icon{
     opacity: 0.8;
+}
+
+
+.nth-1{
+    background-color: #00B562;
+}
+
+.nth-2{
+    background-color: #8032FF;
+}
+
+.nth-3{
+    background-color: #FF9E1C;
 }

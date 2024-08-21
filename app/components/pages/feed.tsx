@@ -145,7 +145,7 @@ export default function FeedView(){
                 
 
         <Card className='feed-top-bar-selection ml-[6px] mt-[0.5px]' onClick={()=>setFeedType(feedType == 'in_app'? 'discord_chats' : 'in_app')}>
-                   <p className='feed-top-bar-selection-text'>View {feedType == 'in_app'? 'Feed' : 'Glasspane'}</p>
+                   <p className='feed-top-bar-selection-text'>View {feedType == 'in_app'? 'Glasspane' : 'Feed'}</p>
                    <div className='feed-top-bar-selection-text-icon'>⌘V</div>
                 </Card>
      

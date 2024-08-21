@@ -7,6 +7,16 @@ import { Input } from '@/components/ui/input';
 import Image from 'next/image';
 import { ScrollArea } from '@/components/ui/scroll-area';
 import { GoTriangleRight } from 'react-icons/go';
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuGroup,
+  DropdownMenuItem,
+  DropdownMenuSeparator,
+  DropdownMenuShortcut,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu"
+import { HiDocumentArrowUp } from "react-icons/hi2";
 
 
 export default function DocumentView(){
@@ -62,12 +72,32 @@ export default function DocumentView(){
       <div className='top-filter-icon'> <FaSliders className='doc-filter mt-[9.5px]'/> </div>
         <Card><Input className='search-doc-input' placeholder='Search documents'/></Card>
 
-
+        <DropdownMenu>
+        <DropdownMenuTrigger asChild>
                 <Card className='create-team-dialog-footer-button ml-[1.1px]' >
                     <p className='create-team-dialog-footer-button-text'>Create</p>
                     <div className='create-team-dialog-footer-button-tip'>N</div>
                 </Card>
+            </DropdownMenuTrigger>
+          <DropdownMenuContent className="w-36">
+          <DropdownMenuItem className='p-[5px] cursor-item-grid-item'> 
+             <HiDocumentArrowUp className='create-grid-view-icon' />
+            <span className='create-grid-view-text'>File</span>
+</DropdownMenuItem>
+          
 
+          <DropdownMenuItem className='p-[4px] cursor-item-grid-item'>
+          <FaFolder className='create-grid-view-icon' />
+            <span className='create-grid-view-text'>Folder</span>
+
+          </DropdownMenuItem>
+           
+
+          </DropdownMenuContent>
+
+       
+
+          </DropdownMenu>
                
             </div>
 

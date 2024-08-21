@@ -36,6 +36,8 @@ import { addDays, format } from "date-fns"
 import { DateRange } from "react-day-picker"
 import { TiArrowSortedDown } from "react-icons/ti";
 import { ScrollArea, ScrollBar } from '@/components/ui/scroll-area';
+import BrowseDevelopers from './pages/browse-developers';
+import EditTask from './pages/edit-roadmap-tasks';
 
 
 interface detailsInterface{
@@ -79,6 +81,7 @@ export default function RoadmapView(){
     const [weekDays, setProjectDUration] = useState<weekDays[]>([])
     const [monthsIndex,setMonthsIndex] = useState([1,2,3,4,5,6,7,8,9,10,11,12])
     const [weeksToRender, setWeeksToRender] = useState<weeksToRender[]>([])
+    const [dialogPercentage, setDialogPercentage] = useState('100%')
     const [roadMapTasks, setRoadMapTasks] = useState([
       {
         id: 0,
@@ -129,7 +132,9 @@ export default function RoadmapView(){
     }
     function renderTasks(value: roadMapTaskInterface, index: number, row: number){
       let elm = (
-      <Card style={{transform:`translateX(${value.left}px) translateY(${value.top}px)`,width:`${value.width}px`}} className={` p-[10px] mt-[10px] roadmap-tasks-render-layout`}>
+        <Sheet>
+        <SheetTrigger asChild>
+        <Card style={{transform:`translateX(${value.left}px) translateY(${value.top}px)`,width:`${value.width}px`}} className={` p-[10px] mt-[10px] roadmap-tasks-render-layout cursor-touchable`}>
           
           
           {renderIcon(value.details.status)}
@@ -154,6 +159,15 @@ export default function RoadmapView(){
           <p className='budget-item-text pt-[2px]'>{value.details.budget}</p>
 
       </Card>
+    </SheetTrigger>
+    <SheetContent className='browse-developers-sheet w-[350px]'>
+      <EditTask />
+    </SheetContent>    
+       
+    </Sheet>
+
+
+    
       )
       renderTasksClusterRemaker.push({
         id: index,
@@ -386,15 +400,33 @@ export default function RoadmapView(){
       <DropdownMenuTrigger asChild>
 
             <Card className='create-team-dialog-footer-button-no-design grid grid-cols-2'>
-           <p className='create-team-dialog-footer-button-text-no-design ml-[5px]'>100%</p>
+           <p className='create-team-dialog-footer-button-text-no-design ml-[5px]'>{dialogPercentage}</p>
            <TiArrowSortedDown className="nav-list-item-icon ml-[12px]" />  
 
                 </Card>
 
                 </DropdownMenuTrigger>
-      <DropdownMenuContent>
-      
-        </DropdownMenuContent>
+                <DropdownMenuContent>
+      <DropdownMenuItem onClick={()=> setDialogPercentage('25%')}>
+      <div className='p-[3px] dialog-dropdown-for-percentage'>25%</div>
+        </DropdownMenuItem>
+
+        <DropdownMenuItem onClick={()=> setDialogPercentage('50%')}>
+      <div className='p-[3px] dialog-dropdown-for-percentage'>50%</div>
+        </DropdownMenuItem>
+
+        
+        <DropdownMenuItem onClick={()=> setDialogPercentage('75%')}>
+      <div className='p-[3px] dialog-dropdown-for-percentage'>75%</div>
+        </DropdownMenuItem>
+
+        
+        <DropdownMenuItem onClick={()=> setDialogPercentage('100%')}>
+      <div className='p-[3px] dialog-dropdown-for-percentage'>100%</div>
+        </DropdownMenuItem>
+</DropdownMenuContent>
+
+
         </DropdownMenu>
 
                 <Sheet>
@@ -415,7 +447,7 @@ export default function RoadmapView(){
 
             <div className='grid grid-cols-1 mt-[25px]'>
                 <h4 className='view-labels'>Title</h4>
-                <Input className='input-element-long-input focus:outline-none' placeholder='Type something...' />
+                <Input className='focus:outline-none input-element-long-input' placeholder='Type something...' />
                
             </div>
 
@@ -468,8 +500,7 @@ export default function RoadmapView(){
 
                 <DropdownMenu>
                     <DropdownMenuTrigger asChild>
-                    <Card className='create-task-grid-item p-[10px] ml-[7px]'  onClick={()=>set_new_create_task_status('complete_option')}>
-                    <FaCheckCircle className='create-task-grid-item-icon-left completed-cion hide-elem' />
+                    <Card className='create-task-item-grid-2 p-[10px] ml-[7px]'  onClick={()=>set_new_create_task_status('complete_option')}>
                     <h3 className='create-task-grid-item-text pt-[2px] ml-[-15px]'>{new_create_task_point} points</h3>
                     <GoTriangleDown className='create-task-grid-item-icon-right'/>
 
@@ -477,28 +508,22 @@ export default function RoadmapView(){
                     </DropdownMenuTrigger>
                 <DropdownMenuContent className='w-[170px]'>
                     <DropdownMenuItem>
-                    <div className='create-task-grid-item p-[10px]'  onClick={()=>set_new_create_task_point('8')}>
-                    <FaRegCircle className='create-task-grid-item-icon-left progress-icon hide-elem' />
+                    <div className='create-task-grid-item-grid p-[10px]'  onClick={()=>set_new_create_task_point('8')}>
                     <h3 className='create-task-grid-item-text'>8 points</h3>
-                    <GoTriangleDown className='create-task-grid-item-icon-right hide-elem'/>
 
                   </div> 
                     </DropdownMenuItem>
 
                     <DropdownMenuItem>
-                    <div className='create-task-grid-item p-[10px]' onClick={()=>set_new_create_task_point('16')}>
-                    <RiProgress4Line className='create-task-grid-item-icon-left hide-elem' />
+                    <div className='create-task-item-grid p-[10px]' onClick={()=>set_new_create_task_point('16')}>
                     <h3 className='create-task-grid-item-text'>16 points</h3>
-                    <GoTriangleDown className='create-task-grid-item-icon-right hide-elem'/>
 
                   </div> 
                     </DropdownMenuItem>
 
                     <DropdownMenuItem>
-                    <div className='create-task-grid-item p-[10px]'  onClick={()=>set_new_create_task_point('32')}>
-                    <FaCheckCircle className='create-task-grid-item-icon-left completed-cion hide-elem' />
+                    <div className='create-task-item-grid p-[10px]'  onClick={()=>set_new_create_task_point('32')}>
                     <h3 className='create-task-grid-item-text'>32 points</h3>
-                    <GoTriangleDown className='create-task-grid-item-icon-right hide-elem'/>
 
                   </div> 
                     </DropdownMenuItem>
@@ -555,10 +580,20 @@ developers assigned to subtasks</p>
             </div>
              <div className='grid grid-cols-2 mt-[10px]'>
             
-             <Card className='create-task-grid-item-2 browse-developers p-[10px]'>
+            
+                
+                <Sheet>
+                    <SheetTrigger asChild>
+                    <Card className='create-task-grid-item-2 browse-developers p-[10px]'>
                 <h3 className='create-task-grid-item-text pt-[2px] ml-[-10px]'>Browse Developers</h3>
                 <GoTriangleRight className='create-task-grid-item-icon-right mt-[-1.5px]'/>
                 </Card>
+                </SheetTrigger>
+                <SheetContent className='browse-developers-sheet w-[350px]'>
+                  <BrowseDevelopers />
+                </SheetContent>    
+                   
+                </Sheet>
 
              </div> 
 

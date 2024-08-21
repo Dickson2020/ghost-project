@@ -50,6 +50,8 @@ const SideNavigation: React.FC<SideNavigationProp> = ({changePage}) =>{
   const [currentTabPopup,setCurrentTabPopup] = useState('popup_members')
   const [currentAccount, setCurrentAccount] = useState('2')
   const [dialog_page_to_show, set_dialog_page_To_show] = useState<JSX.Element>( <CreateTeamView />)
+  const [projectView, setProjectView] = useState('EchoVerse')
+  const [nthStyle, setNthStyle] = useState('nth-1')
   
 
   
@@ -57,6 +59,25 @@ const SideNavigation: React.FC<SideNavigationProp> = ({changePage}) =>{
     let _PAGE = null
     return _PAGE
   }
+
+
+  useEffect(()=>{
+
+    switch(projectView){
+      case 'EchoVerse':
+        setNthStyle('nth-1') 
+        break
+      
+      case 'CloudHive':
+        setNthStyle('nth-2') 
+        break
+
+      case 'ProjectLaunch':
+        setNthStyle('nth-3') 
+        break
+    }
+
+  }, [projectView])
 
 
   useEffect(()=>{
@@ -121,8 +142,8 @@ const SideNavigation: React.FC<SideNavigationProp> = ({changePage}) =>{
       <DropdownMenuTrigger asChild>
        
            <Card className="nav-top-user">
-                <div className="nav-top-user-icon"/>
-                <p className="nav-top-user-text resize-text">Echoverse</p>
+                <div className={"nav-top-user-icon " + nthStyle}/>
+                <p className="nav-top-user-text resize-text">{projectView}</p>
                 <FaSort className="nav-top-user-right-icon"/>
                 
             </Card>
@@ -131,22 +152,63 @@ const SideNavigation: React.FC<SideNavigationProp> = ({changePage}) =>{
               
             </DropdownMenuTrigger>
        <DropdownMenuContent className="w-56">
-       <DropdownMenuGroup>
 
-       <DropdownMenuItem className="cursor">
-       <div className="nav-top-pop-list-item-icon"/>
+       <DropdownMenuItem onClick={()=>setProjectView('EchoVerse')} className="grid grid-rows-1 gap-1 cursor-hover">
+      
+     
+      <div className="rail-top-view-items">
+      <div className="nav-top-pop-list-item-icon"/>
 
-            <span className="nav-side-pop-item-text ml-[12px]">Liam Patel</span>
-            <DropdownMenuShortcut>
-            <p className="nav-top-pop-list-item-text">43% done</p>
-              </DropdownMenuShortcut>
+<span className="nav-side-pop-item-text">EchoVerse</span>
+<DropdownMenuShortcut>
+<p className="nav-top-pop-list-item-text">43% done</p>
+  </DropdownMenuShortcut>
+      </div>
+
+              <div className='rail-gray'>
+                <div  className="rail-gray-progress rail-progress-1"/>
+              </div>
+      
+            
+          </DropdownMenuItem>
+          <DropdownMenuItem onClick={()=>setProjectView('CloudHive')} className="grid grid-rows-1 gap-1 cursor-hover">
+      
+     
+      <div className="rail-top-view-items">
+      <div className="nav-top-pop-list-item-icon-2"/>
+
+<span className="nav-side-pop-item-text">CloudHive</span>
+<DropdownMenuShortcut>
+<p className="nav-top-pop-list-item-text">68% done</p>
+  </DropdownMenuShortcut>
+      </div>
+
+              <div className='rail-gray'>
+                <div  className="rail-gray-progress rail-progress-2"/>
+              </div>
+      
+            
+          </DropdownMenuItem>
+          <DropdownMenuItem onClick={()=>setProjectView('ProjectLaunch')} className="grid grid-rows-1 gap-1 cursor-hover">
+      
+     
+      <div className="rail-top-view-items">
+      <div className="nav-top-pop-list-item-icon-3"/>
+
+<span className="nav-side-pop-item-text">ProjectLaunch</span>
+<DropdownMenuShortcut>
+<p className="nav-top-pop-list-item-text">98% done</p>
+  </DropdownMenuShortcut>
+      </div>
+
+              <div className='rail-gray'>
+                <div  className="rail-gray-progress rail-progress-3"/>
+              </div>
+      
             
           </DropdownMenuItem>
 
-  
-
-        </DropdownMenuGroup>
-
+        
         <DropdownMenuSeparator />
 
        <DropdownMenuGroup>
@@ -513,8 +575,8 @@ const SideNavigation: React.FC<SideNavigationProp> = ({changePage}) =>{
       <DropdownMenuTrigger asChild>
        
 
-          <Card className="nav-top-user mt-[20px]">
-                <div className="nav-top-user-icon"/>
+          <Card className="nav-top-user  mt-[20px]">
+                <div className="nav-top-user-icon nth-1"/>
                 <p className="nav-top-user-text resize-text">{currentAccount == '2'? 'Aarav Sareen' :'Liam Patel'  }</p>
                 <FaSort className="nav-top-user-right-icon"/>
                 

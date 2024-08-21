@@ -20,37 +20,35 @@
 
 }
 
-.create-team-view4-input:focus{
+.edit-task-view4-input:focus{
     border: none;
     outline: none;
 }
-.create-team-container{
+.edit-task-container{
     width: 100%;
     height: 100%;
     display: flex;
     flex-direction: column;
 
 }
-.create-team-view1{
+.edit-task-view1{
     display: flex;
     flex-direction: row;
-    padding: 10px;
 
 }
 
-.create-team-view2{
+.edit-task-view2{
     display: flex;
     flex-direction: row;
-    padding: 10px;
 
 }
 
-create-team-view4{
+edit-task-view4{
     display: flex;
     flex-direction: row;
     padding: 10px;
 }
-.create-team-view3{
+.edit-task-view3{
 
     display: flex;
     flex-direction: column;
@@ -58,7 +56,7 @@ create-team-view4{
 }
 
 
-.create-team-view1-icon{
+.edit-task-view1-icon{
     font-size: 14px;
     opacity: 0.8;
     justify-self: center;
@@ -66,7 +64,7 @@ create-team-view4{
     cursor:pointer;
 }
 
-.create-team-view1-text{
+.edit-task-view1-text{
     font-weight: 600;
     opacity: 0.8;
     margin-left: 10px;
@@ -74,7 +72,7 @@ create-team-view4{
 }
 
 
-.create-team-view2-icon{
+.edit-task-view2-icon{
     width:30px;
     height:30px;
     background-color: rgba(12, 140, 233,0.9);
@@ -85,7 +83,7 @@ create-team-view4{
     padding-left: 5px;
 }
 
-.create-team-view2-input{
+.edit-task-view2-input{
     width: calc(100%/1.15);
     font-size: 12.9px;
     padding: 0px;
@@ -94,20 +92,20 @@ create-team-view4{
     
 }
 
-.create-team-view3-title{
+.edit-task-view3-title{
     font-weight: 500;
     opacity: 0.8;
     font-size: 14.9px;
 }
 
 
-.create-team-view3-description{
+.edit-task-view3-description{
     opacity: 0.8;
     font-size: 12.9px;
     margin-top: 6px;
 }
 
-.create-team-view4-input{
+.edit-task-view4-input{
     flex: 0.6;
     border-radius: 5px;
     font-size: 12px;
@@ -116,14 +114,14 @@ create-team-view4{
 
 }
 
-.create-team-view4-icon1{
+.edit-task-view4-icon1{
     flex: 0.4;
     font-size: 12.7px;
     cursor: pointer;
 }
 
 
-.create-team-view4-icon2{
+.edit-task-view4-icon2{
     flex: 0.3;
     opacity: 0.7;
     font-size: 12.7px;
@@ -131,29 +129,28 @@ create-team-view4{
 
 }
 
-.create-team-view-scroll{
+.edit-task-view-scroll{
    
     display: grid;
     grid-template-columns: 1fr;
     width: 100%;
-    height: 280px;
-    padding: 10px;
+   
 }
 
 
-.create-team-list-item{
+.edit-task-list-item{
     width: 100%;
     height: auto;
     border-radius: 8px;
     padding: 10px;
 }
 
-.create-team-list-item-head{
+.edit-task-list-item-head{
   display: grid;
   grid-template-columns: 0.26fr 1fr;
 }
 
-.create-team-list-item-head-title{
+.edit-task-list-item-head-title{
     font-size: 12px;
     margin-top: -2px;
 }
@@ -172,18 +169,18 @@ create-team-view4{
     font-size: 19px;
     font-weight: 900;
 }
-.create-team-list-item-head-description{
+.edit-task-list-item-head-description{
     font-size: 12px;
     padding-left: 56px;
     margin-top: -14px;
 }
 
-.create-team-list-item-head-description-inner{
+.edit-task-list-item-head-description-inner{
     display: flex;
     flex-direction: row;
 }
 
-.create-team-list-item-head-title-view{
+.edit-task-list-item-head-title-view{
     display: grid;
     grid-template-columns: 1fr 0.2fr 1fr;
 }
@@ -203,12 +200,12 @@ create-team-view4{
     grid-template-columns: repeat(5, 1fr);
 }
 
-.create-team-list-item{
+.edit-task-list-item{
     margin-top: 10px;
     
 }
 
-.create-team-dialog-footer-button-no-design{
+.edit-task-dialog-footer-button-no-design{
     width: 80px;
     height: 36px;
     background-color:white;
@@ -217,7 +214,7 @@ create-team-view4{
     color: black;
 
 }
-.create-team-dialog-footer-button{
+.edit-task-dialog-footer-button{
     width: 100px;
     height: 100%;
     background-color: rgba(12, 140, 233,0.9);
@@ -227,7 +224,7 @@ create-team-view4{
     cursor: pointer;
 }
 
-.create-team-dialog-footer-button-text{
+.edit-task-dialog-footer-button-text{
     font-size: 13px;
     font-weight: 500;
     opacity: 0.8;
@@ -236,7 +233,7 @@ create-team-view4{
 }
 
 
-.create-team-dialog-footer-button-text-no-design{
+.edit-task-dialog-footer-button-text-no-design{
     font-size: 13px;
     font-weight: 500;
     opacity: 0.8;
@@ -244,7 +241,7 @@ create-team-view4{
     color: black;
 }
 
-.create-team-dialog-footer-button-tip{
+.edit-task-dialog-footer-button-tip{
     background: rgba(255, 255, 255,0.4);
     font-size: 10.7px;
     text-align: center;
@@ -274,8 +271,4 @@ create-team-view4{
     display: flex;
     flex-direction: row;
     gap: 5;
-}
-
-.cursor-touchable{
-    cursor: pointer;
 }

@@ -34,6 +34,7 @@ import { Button } from "@/components/ui/button"
 import { Calendar } from "@/components/ui/calendar"
 import { addDays, format } from "date-fns"
 import { DateRange } from "react-day-picker"
+import BrowseDevelopers from './pages/browse-developers';
 
 export default function KanbanView(){
     const [date, setDate] = useState<DateRange | undefined>({
@@ -263,11 +264,9 @@ export default function KanbanView(){
 
                 </DropdownMenuContent>
                 </DropdownMenu>
-
                 <DropdownMenu>
                     <DropdownMenuTrigger asChild>
-                    <Card className='create-task-grid-item p-[10px] ml-[7px]'  onClick={()=>set_new_create_task_status('complete_option')}>
-                    <FaCheckCircle className='create-task-grid-item-icon-left completed-cion hide-elem' />
+                    <Card className='create-task-item-grid-2 p-[10px] ml-[7px]'  onClick={()=>set_new_create_task_status('complete_option')}>
                     <h3 className='create-task-grid-item-text pt-[2px] ml-[-15px]'>{new_create_task_point} points</h3>
                     <GoTriangleDown className='create-task-grid-item-icon-right'/>
 
@@ -275,28 +274,22 @@ export default function KanbanView(){
                     </DropdownMenuTrigger>
                 <DropdownMenuContent className='w-[170px]'>
                     <DropdownMenuItem>
-                    <div className='create-task-grid-item p-[10px]'  onClick={()=>set_new_create_task_point('8')}>
-                    <FaRegCircle className='create-task-grid-item-icon-left progress-icon hide-elem' />
+                    <div className='create-task-grid-item-grid p-[10px]'  onClick={()=>set_new_create_task_point('8')}>
                     <h3 className='create-task-grid-item-text'>8 points</h3>
-                    <GoTriangleDown className='create-task-grid-item-icon-right hide-elem'/>
 
                   </div> 
                     </DropdownMenuItem>
 
                     <DropdownMenuItem>
-                    <div className='create-task-grid-item p-[10px]' onClick={()=>set_new_create_task_point('16')}>
-                    <RiProgress4Line className='create-task-grid-item-icon-left hide-elem' />
+                    <div className='create-task-item-grid p-[10px]' onClick={()=>set_new_create_task_point('16')}>
                     <h3 className='create-task-grid-item-text'>16 points</h3>
-                    <GoTriangleDown className='create-task-grid-item-icon-right hide-elem'/>
 
                   </div> 
                     </DropdownMenuItem>
 
                     <DropdownMenuItem>
-                    <div className='create-task-grid-item p-[10px]'  onClick={()=>set_new_create_task_point('32')}>
-                    <FaCheckCircle className='create-task-grid-item-icon-left completed-cion hide-elem' />
+                    <div className='create-task-item-grid p-[10px]'  onClick={()=>set_new_create_task_point('32')}>
                     <h3 className='create-task-grid-item-text'>32 points</h3>
-                    <GoTriangleDown className='create-task-grid-item-icon-right hide-elem'/>
 
                   </div> 
                     </DropdownMenuItem>
@@ -353,10 +346,19 @@ developers assigned to subtasks</p>
             </div>
              <div className='grid grid-cols-2 mt-[10px]'>
             
-             <Card className='create-task-grid-item-2 browse-developers p-[10px]'>
+             <Sheet>
+                    <SheetTrigger asChild>
+                    <Card className='create-task-grid-item-2 browse-developers p-[10px]'>
                 <h3 className='create-task-grid-item-text pt-[2px] ml-[-10px]'>Browse Developers</h3>
                 <GoTriangleRight className='create-task-grid-item-icon-right mt-[-1.5px]'/>
                 </Card>
+                </SheetTrigger>
+                <SheetContent className='browse-developers-sheet w-[350px]'>
+                  <BrowseDevelopers />
+                </SheetContent>    
+                   
+                </Sheet>
+
 
              </div> 
 
