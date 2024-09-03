@@ -583,7 +583,7 @@ const SideNavigation: React.FC<SideNavigationProp> = ({changePage}) =>{
 
            <Card className="last-week-report-button">
             <div>
-              <p className="last-week-report-button-text-1">See last week's report</p>
+              <p className="last-week-report-button-text-1">See last week&apos; report</p>
               <p className="last-week-report-button-text-2">10th August-10th August</p>
             </div>
 
