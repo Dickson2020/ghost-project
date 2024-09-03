@@ -9,6 +9,8 @@ import { DateRange } from "react-day-picker"
 import { FaCalendar, FaPlus, FaSliders } from "react-icons/fa6";
 import { FaSort } from 'react-icons/fa6'
 import {ScrollArea} from "@/components/ui/scroll-area";
+import { FiArrowUpRight } from "react-icons/fi";
+
 import {
     LineChart,
     ResponsiveContainer,
@@ -34,6 +36,8 @@ import {
     DropdownMenuTrigger,
   } from "@/components/ui/dropdown-menu"
 import CustomToolTip from './chart-tooltip';
+
+
 
 export default function DashboardView(){
 
@@ -152,7 +156,45 @@ export default function DashboardView(){
 
             <div className='dashboard-top-view'>
 
-                <p className='dashboard-top-view-title ml-[10px]'>EchoVerse</p>
+
+                <div className='top-view-components'>
+                    <div className='top-title-view'>
+                    <p className='dashboard-top-view-title ml-[10px]'>EchoVerse</p>
+
+                    </div>
+
+                    <div className='share-rear mt-[-9px]'>
+
+                        <div className='share-rear-avatars'>
+            <Avatar className='share-rear-avatars border-line'>
+                  <AvatarImage src="https://github.com/shadcn.png" alt="@shadcn" />
+                  <AvatarFallback>CN</AvatarFallback>
+                  
+                </Avatar>
+
+                <Avatar className='ml-[-9px] border-line share-rear-avatars'>
+                  <AvatarImage src="https://github.com/shadcn.png" alt="@shadcn" />
+                  <AvatarFallback>CN</AvatarFallback>
+                  
+                </Avatar>
+
+                <Avatar className='ml-[-9px] border-line share-rear-avatars'>
+                  <AvatarImage src="https://github.com/shadcn.png" alt="@shadcn" />
+                  <AvatarFallback>CN</AvatarFallback>
+                  
+                </Avatar>
+
+                <Avatar className='ml-[-9px] border-line share-rear-avatars'>
+                  <AvatarImage src="https://github.com/shadcn.png" alt="@shadcn" />
+                  <AvatarFallback>CN</AvatarFallback>
+                  
+                </Avatar>
+                        </div>
+                        <Card className='share-button'>
+                            Share
+                        </Card>
+                    </div>
+                </div>
 
                 <Card className='top-view-text-card'>
                 EchoVerse is an experimental project aiming to create an immersive audio experience through collaborative 
@@ -167,16 +209,13 @@ export default function DashboardView(){
 
 
             <ScrollArea className='task-render-dashboard'>
-            <div className='before-render-data'>
-                <p className='before-render-data-text mt-[-3px]'>This weeks tasks</p>
-                <FaPlus className='before-render-data-icon  mt-[-5px]' />
-            </div>
+           
 
-           <div className='pb-[10px] chart-view'> 
+           <div className='pb-[10px] pt-[15px] chart-view'> 
            <Card className='dashboard-chart-view'>
                 <div  className='dashboard-chart-view-top pt-[6px]'>
                     <div className='grid grid-rows-2'>
-                        <h4 className='dashboard-chart-view-top-title ml-[10px] mt-[-12]'>Progress</h4>
+                        <h4 className='dashboard-chart-view-top-title ml-[10px] mt-[-15]'>Progress</h4>
                         <div className='grid grid-cols-3 gap-2 ml-[10px]'>
                         <div className='grid grid-cols-2 h-[10px]'>
               
@@ -236,7 +275,7 @@ export default function DashboardView(){
                 <Card className='h-[30px] view-history-button'>View History</Card>
 
                 </div>
-                <div  className='dashboard-chart-view-chart'>
+                <div  className='dashboard-chart-view-chart mt-[10px]'>
                 <ResponsiveContainer width="100%">
 
                 <LineChart  width={390} height={190} data={pdata} >
@@ -260,7 +299,12 @@ export default function DashboardView(){
             </Card>
             <p className='dashboard-chart-view-bottom-text mt-[5px] ml-[10px]'>Projected values may fluctuate.</p>
            </div>
-
+           <div className='scrollview-partion-view'>
+            <div className='sc-partition-1'>
+           <div className='before-render-data'>
+                <p className='before-render-data-text mt-[-3px]'>This weeks tasks</p>
+                <FaPlus className='before-render-data-icon  mt-[-5px]' />
+            </div>
                 <Card className='task-card'>
                     <CardContent>
                         <p className='task-card-duration mt-[12px]'>1 Jun -- 5 Jun</p>
@@ -332,6 +376,50 @@ export default function DashboardView(){
                     <p className='task-card-budget-text'>$800 estimate</p>
                     </div>
                 </Card>
+
+                </div>
+                <div className='sc-partition-2'>
+                <div className='before-render-data'>
+                <p className='before-render-data-text mt-[-3px]'>Recent activity</p>
+                <div className='mt-[-5px] before-render-data-text-with-icon'><p className='before-render-data-text'>View all logs</p> <FiArrowUpRight className='ml-[7px] before-render-data-icon-2' /></div>
+            </div>
+
+            <Card className='activity-card p-[7px]'>
+                <div>
+                <Avatar className='activity-card-icon w-[30px] h-[30px]'>
+                  <AvatarImage src="https://github.com/shadcn.png" alt="@shadcn" />
+                  <AvatarFallback>CN</AvatarFallback>
+                  
+                </Avatar>
+                </div>
+                <div className='pl-[4px]'>
+                    <p className='activity-title mt-[10px]'>File uploaded</p>
+                    <p className='activity-description mt-[6px]'>music_totally_related_to_the_project.mp3</p>
+                    <p className='activity-date mt-[6px]'>Apr 21, 2024, 8:30AM</p>
+                </div>
+            </Card>
+            
+           
+            
+            <Card className='activity-card mt-[7px] p-[7px]'>
+                <div>
+                <Avatar className='activity-card-icon w-[30px] h-[30px]'>
+                  <AvatarImage src="https://github.com/shadcn.png" alt="@shadcn" />
+                  <AvatarFallback>CN</AvatarFallback>
+                  
+                </Avatar>
+                </div>
+                <div className='pl-[4px]'>
+                    <p className='activity-title mt-[10px]'>File uploaded</p>
+                    <p className='activity-description mt-[6px]'>music_totally_related_to_the_project.mp3</p>
+                    <p className='activity-date mt-[6px]'>Apr 21, 2024, 8:30AM</p>
+                </div>
+            </Card>
+                </div>
+                </div>
+
+                
+
             </ScrollArea>
             
             

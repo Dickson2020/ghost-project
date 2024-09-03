@@ -1,10 +1,10 @@
 import { Card } from "@/components/ui/card";
 import { RiHomeFill } from "react-icons/ri";
 import { RiMapFill } from "react-icons/ri";
-import { FaMoneyBills } from "react-icons/fa6";
+import { FaMoneyBills, FaUserGroup } from "react-icons/fa6";
 import { FaSliders } from "react-icons/fa6";
 import { FaSort, FaFile } from "react-icons/fa6";
-import { IoEllipsisHorizontal } from "react-icons/io5";
+import { IoEllipsisHorizontal, IoReader } from "react-icons/io5";
 import { FaCommentAlt, FaQuestionCircle, FaRegQuestionCircle } from "react-icons/fa";
 import { FaHeart } from "react-icons/fa6";
 import './media-queries.css'
@@ -37,6 +37,8 @@ import CreateTeamView from "./pages/create-team";
 import MembersView from "./pages/members-view";
 import BillingView from "./pages/billing-view";
 import { GoTriangleRight } from "react-icons/go";
+import { BsFillArrowUpRightCircleFill } from "react-icons/bs";
+import { ScrollArea } from "@/components/ui/scroll-area";
 
 
 
@@ -137,6 +139,8 @@ const SideNavigation: React.FC<SideNavigationProp> = ({changePage}) =>{
     return(
         <div id='sidebar-container' className="sidebar-container">
 
+          <ScrollArea className="w-[100%] h-[auto]"> 
+<div className="w-[100%] h-[auto]">
            <div>
       <DropdownMenu>
       <DropdownMenuTrigger asChild>
@@ -270,7 +274,37 @@ const SideNavigation: React.FC<SideNavigationProp> = ({changePage}) =>{
                   }>
                     
                   <FaFile className="nav-list-item-icon" />  
-                  <p className="nav-list-item-text">Documents</p>
+                  <p className="nav-list-item-text">Files</p>
+                  <div className="nav-list-item-right-icon">
+                  </div>
+                </div>
+
+                </li>
+
+                  <li className="nav-list-menu-divider">
+
+                <div onClick={()=>setCurrentTab("members")} className={currentTab == "members"?
+                 "nav-list-items nav-list-items-selected":
+                 "nav-list-items"
+                  }>
+                    
+                  <FaUserGroup className="nav-list-item-icon" />  
+                  <p className="nav-list-item-text">Members</p>
+                  <div className="nav-list-item-right-icon">
+                  </div>
+                </div>
+
+                </li>
+
+                  <li className="nav-list-menu-divider">
+
+                <div onClick={()=>setCurrentTab("reports")} className={currentTab == "reports"?
+                 "nav-list-items nav-list-items-selected":
+                 "nav-list-items"
+                  }>
+                    
+                  <IoReader className="nav-list-item-icon" />  
+                  <p className="nav-list-item-text">Reports</p>
                   <div className="nav-list-item-right-icon">
                   </div>
                 </div>
@@ -546,6 +580,20 @@ const SideNavigation: React.FC<SideNavigationProp> = ({changePage}) =>{
             </div>
            </div>
 
+
+           <Card className="last-week-report-button">
+            <div>
+              <p className="last-week-report-button-text-1">See last week's report</p>
+              <p className="last-week-report-button-text-2">10th August-10th August</p>
+            </div>
+
+            <div>
+              <BsFillArrowUpRightCircleFill className="last-week-report-button-icon"/>
+            </div>
+           </Card>
+</div>
+
+</ScrollArea>
           <div>
           <ul className="mt-[0px]">
                 <li className="nav-list-menu-divider">
@@ -578,7 +626,7 @@ const SideNavigation: React.FC<SideNavigationProp> = ({changePage}) =>{
       <DropdownMenuTrigger asChild>
        
 
-          <Card className="nav-top-user  mt-[20px]">
+          <Card className="nav-top-user  mt-[5px]">
                 <div className="nav-top-user-icon nth-1"/>
                 <p className="nav-top-user-text resize-text">{currentAccount == '2'? 'Aarav Sareen' :'Liam Patel'  }</p>
                 <FaSort className="nav-top-user-right-icon"/>
@@ -647,6 +695,9 @@ const SideNavigation: React.FC<SideNavigationProp> = ({changePage}) =>{
 
            
         </div>
+
+
+        
     )
 }
 

@@ -8,6 +8,7 @@ import { useEffect, useState } from 'react';
 import KanbanView from './components/kanban-view';
 import RoadmapView from './components/roadmap';
 import DocumentView from './components/filepage';
+import MembersPage from './components/members';
 
 export default function Home() {
 
@@ -92,6 +93,18 @@ export default function Home() {
         <div>
 
           <DocumentView />
+
+        </div>
+      )
+
+      break;
+
+      case 'members':
+
+      element = (
+        <div>
+
+          <MembersPage />
 
         </div>
       )
