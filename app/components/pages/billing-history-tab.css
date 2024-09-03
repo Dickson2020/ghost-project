@@ -1,0 +1,83 @@
+@font-face {
+    font-family: 'Inter1';
+    src: url('../../../fonts/Inter/static/Inter-Light.ttf');
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Inter-regular';
+    src: url('../../../fonts/Inter/static/Inter-Regular.ttf');
+    font-style: normal;
+    font-weight:600;
+
+}
+
+@font-face {
+    font-family: 'Inter-bold';
+    src: url('../../../fonts/Inter/static/Inter-Bold.ttf');
+    font-style: normal;
+    font-weight:400;
+
+}
+
+.billing-history-container{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-rows: 0.1fr 1fr;
+}
+
+
+.billing-history-view-cols{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 2px;
+    border-bottom: 1.4px solid rgba(0, 0, 0, 0.09);
+}
+
+.billing-history-view-cols-text{
+    font-size: 9px;
+    opacity: 0.7;
+    color: #111111;
+    font-family: 'Inter-regular';
+    font-weight: 500;
+    text-align: center;
+}
+
+.billing-history-scrollview{
+    width: 100%;
+    height: 100%;
+    margin-top: -20px;
+
+}
+.billing-history-scrollview-inner{
+    width: 100%;
+    height: auto;
+}
+
+.billing-history-item{
+    width: 100%;
+    height: 30px;
+    padding-top: 9px;
+    display: grid;
+    grid-template-columns: 0.7fr 0.2fr 0.3fr 0.9fr;
+    margin-top: 3px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.09);
+    
+}
+
+.billing-history-item-paid-label{
+    padding: 4px;
+    background: rgba(0, 181, 98,0.7);
+    border-radius: 4px;
+}
+
+.billing-history-item-unpaid-label{
+    padding: 4px;
+    background: rgba(0, 0, 0,0.2);
+    border-radius: 4px;
+}
+.history-label-text{
+    font-family: 'Inter-regular';
+    font-size: 9.2px;
+}

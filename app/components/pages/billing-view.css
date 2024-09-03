@@ -1,0 +1,81 @@
+@font-face {
+    font-family: 'Inter1';
+    src: url('../../../fonts/Inter/static/Inter-Light.ttf');
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Inter-regular';
+    src: url('../../../fonts/Inter/static/Inter-Regular.ttf');
+    font-style: normal;
+    font-weight:600;
+
+}
+
+@font-face {
+    font-family: 'Inter-bold';
+    src: url('../../../fonts/Inter/static/Inter-Bold.ttf');
+    font-style: normal;
+    font-weight:400;
+
+}
+
+.billing-container{
+    width:100%;
+    height: 100%;
+    display: grid;
+    grid-template-rows: 0.2fr 1fr;
+
+}
+.billing-view-title{
+    width:100%;
+   
+}
+.billing-view-title-text{
+ font-family: 'Inter-semibold';
+ opacity: 0.8;
+ font-size: 17px;
+}
+
+.billing-view-tab-title{
+    font-size: 11px;
+    font-family: 'Inter-semibold';
+    opacity: 0.8;
+
+}
+
+.billing-view-tab{
+    width: 100%;
+    height: 40px;
+    display: flex;
+    flex-direction: row;
+    margin-top: 12px;
+   
+}
+
+.billing-view-tab-button{
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: 0.1s;
+}
+
+.active-tab{
+    border-bottom: 2.5px solid #111111;
+}
+
+.active-tab-title{
+    color: #111111;
+}
+
+.inactive-tab-title{
+    color: #111111;
+    opacity: 0.7;
+}
+
+
+.inactive-tab{
+    border-bottom: 2.5px solid rgba(0,0,0,0.09);
+
+}
+

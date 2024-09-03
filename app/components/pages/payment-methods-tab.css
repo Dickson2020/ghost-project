@@ -1,0 +1,134 @@
+@font-face {
+    font-family: 'Inter1';
+    src: url('../../../fonts/Inter/static/Inter-Light.ttf');
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Inter-regular';
+    src: url('../../../fonts/Inter/static/Inter-Regular.ttf');
+    font-style: normal;
+    font-weight:600;
+
+}
+
+@font-face {
+    font-family: 'Inter-bold';
+    src: url('../../../fonts/Inter/static/Inter-Bold.ttf');
+    font-style: normal;
+    font-weight:400;
+
+}
+
+.payment-tab-container{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-rows: 1fr 0.3fr;
+
+}
+
+.section-1{
+    width: 100%;
+    height: 100%;
+}
+
+
+.section-2{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: right;
+    align-self: flex-end;
+    flex-direction: row;
+    padding-right: 9px;
+}
+
+.scroll-view-inner{
+    padding: 10px;
+    height: auto;
+}
+
+.scroll-component{
+    height: 100%;
+    width: 100%;
+}
+
+.added-cards{
+    width: 100%;
+    height: 50px;
+    border-radius: 5px;
+    display: grid;
+    grid-template-columns: 0.2fr 1fr 0.2fr;
+    padding-top: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    padding-left: 5px;
+}
+
+
+.card-type-icon{
+    width: 20px;
+    height: 20px;
+    margin-left: 9px;
+}
+
+
+.added-card-details{
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    text-align: left;
+    padding-left: 4px;
+}
+
+.added-card-details-number{
+   font-size: 12px;
+   font-family: 'Inter-semibold';
+
+}
+
+.added-card-details-expiry{
+
+    font-size: 12px;
+    color: #111111;
+    opacity: 0.6;
+    font-family: 'Inter-semibold';
+}
+
+.added-card-details-icons{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.selected-card-check{
+    color: #00B562;
+    width: 11.5px;
+    cursor: pointer;
+}
+
+.card-delete{
+    color: #111111;
+    opacity: 0.6;
+    width: 11.5px;
+    cursor: pointer;
+
+}
+
+.add-payment-method-button{
+    padding: 10px;
+    background: #0c8ce9;
+    border-radius: 8px;
+    width: 180px;
+    height: 38px;
+    font-family: 'Inter-regular';
+    color: white;
+    font-size: 13px;
+    
+    
+}
+
+.card-type-icon-card{
+    border-radius: 5px;
+    width: 100%;
+    height: 23px;
+}

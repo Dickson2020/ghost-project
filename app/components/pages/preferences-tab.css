@@ -1,0 +1,67 @@
+@font-face {
+    font-family: 'Inter1';
+    src: url('../../../fonts/Inter/static/Inter-Light.ttf');
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Inter-regular';
+    src: url('../../../fonts/Inter/static/Inter-Regular.ttf');
+    font-style: normal;
+    font-weight:600;
+
+}
+
+@font-face {
+    font-family: 'Inter-bold';
+    src: url('../../../fonts/Inter/static/Inter-Bold.ttf');
+    font-style: normal;
+    font-weight:400;
+
+}
+
+.preference-container{
+    width: 100%;
+    height: auto;
+}
+
+.preference-container-scroll{
+    width: 100%;
+    height: auto;
+}
+
+.pr-form-title{
+    font-family: 'Inter-semibold';
+    opacity: 0.9;
+    font-size: 14px;
+}
+
+.pr-form-description{
+    font-family: 'Inter-regular';
+    font-size: 10px;
+}
+
+.pr-form-input:focus{
+    outline: none;
+}
+
+.pr-form-selection{
+    display: grid;
+    grid-template-columns: 1fr 0.1fr;
+}
+
+.pr-form-selection-title{
+    opacity: 0.8;
+    font-family: 'Inter-regular';
+    font-size: 13px;
+}
+
+.pr-form-selection-icon{
+    width: 15px;
+    opacity: 0.8;
+}
+
+.pr-form-business-tax{
+    display: grid;
+    grid-template-columns: 0.5fr 1fr;
+}

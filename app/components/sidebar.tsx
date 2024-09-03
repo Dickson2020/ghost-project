@@ -297,16 +297,17 @@ const SideNavigation: React.FC<SideNavigationProp> = ({changePage}) =>{
                 <p className="nav-list-item-div-text teams-text">Teams</p>
 
                
-
+               
                   <Dialog>      
                     <DialogTrigger asChild>        
                     
                        <div className="nav-list-item-div-right-icon mt-[3px]">
                        <IoEllipsisHorizontal className="nav-menu-list-div-icon add-tem"/>
                   </div>
+                  
                     </DialogTrigger>      
-                      <DialogContent className="popup-dialog-content">    
-                        <div className="popup-container w-[500px]">
+                      <DialogContent className="popup-dialog-content w-[500px]">    
+                        <div className="popup-container">
                         
                         <div className="popup-side-pane">
 
@@ -414,6 +415,8 @@ const SideNavigation: React.FC<SideNavigationProp> = ({changePage}) =>{
                         </div>    
                       </DialogContent>    
                     </Dialog>  
+
+                    
                 </div>
 
                 </li>
